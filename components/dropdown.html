@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>hiraway - Clean. Minimal. Powerful Admin Template</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link href="../assets/styles/hiraway.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Loading indicator -->
+    <div id="page-loader">
+      <div class="loader"></div>
+    </div>
+    <div class="layout-base">
+      <aside class="sidebar-base sidebar-default" id="sidebar">
+        <div class="sidebar-inner">
+          <div class="sidebar-header">
+            <div class="sidebar-logo">
+              <span class="sidebar-label">hiraway</span>
+            </div>
+            <button
+              class="sidebar-toggle absolute top-4 right-4 flex items-center justify-center w-10 h-10 transition text-gray-800 dark:text-gray-100 focus:outline-none rounded-lg"
+              id="sidebarToggle"
+              aria-label="Toggle sidebar">
+              <svg class="block" height="24" id="sidebarOpenIcon" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9 3.5v17M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"></path>
+              </svg>
+              <svg class="hidden" height="24" id="sidebarClosedIcon" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.367 2.25h5.266c1.092 0 1.958 0 2.655.057c.714.058 1.317.18 1.869.46a4.75 4.75 0 0 1 2.075 2.077c.281.55.403 1.154.461 1.868c.057.697.057 1.563.057 2.655v5.266c0 1.092 0 1.958-.057 2.655c-.058.714-.18 1.317-.46 1.869a4.75 4.75 0 0 1-2.076 2.075c-.552.281-1.155.403-1.869.461c-.697.057-1.563.057-2.655.057H9.367c-1.092 0-1.958 0-2.655-.057c-.714-.058-1.317-.18-1.868-.46a4.75 4.75 0 0 1-2.076-2.076c-.281-.552-.403-1.155-.461-1.869c-.057-.697-.057-1.563-.057-2.655V9.367c0-1.092 0-1.958.057-2.655c.058-.714.18-1.317.46-1.868a4.75 4.75 0 0 1 2.077-2.076c.55-.281 1.154-.403 1.868-.461c.697-.057 1.563-.057 2.655-.057M6.834 3.802c-.62.05-1.005.147-1.31.302a3.25 3.25 0 0 0-1.42 1.42c-.155.305-.251.69-.302 1.31c-.051.63-.052 1.434-.052 2.566v5.2c0 1.133 0 1.937.052 2.566c.05.62.147 1.005.302 1.31a3.25 3.25 0 0 0 1.42 1.42c.305.155.69.251 1.31.302c.392.032.851.044 1.416.05V3.752c-.565.005-1.024.017-1.416.049"
+                  fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+          <nav class="nav-menu">
+            <div class="group">
+              <div class="group-title">
+                <span class="group-title-text sb-label sidebar-label">Dashboard</span>
+              </div>
+              <div class="group-content">
+                <a class="nav-link" href="../index.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6m7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58z" />
+                  </svg>
+                  <span class="sb-label sidebar-label">HealthCare</span>
+                </a>
+                <a class="nav-link" href="../dashboard/education.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09v6h2V9zM17 15.99l-5 2.73l-5-2.73v-3.72L12 15l5-2.73z" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    Education
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+                <a class="nav-link" href="../dashboard/analytics.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M3 17h3v-7H3v7zm5 0h3V7H8v10zm5 0h3v-4h-3v4zm5 0h3V4h-3v13z" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    Analytics
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+
+                <a class="nav-link" href="../dashboard/cryptocurrency.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M17.06 11.57C17.65 10.88 18 9.98 18 9c0-1.86-1.27-3.43-3-3.87V3h-2v2h-2V3H9v2H6v2h2v10H6v2h3v2h2v-2h2v2h2v-2c2.21 0 4-1.79 4-4c0-1.45-.78-2.73-1.94-3.43M10 7h4c1.1 0 2 .9 2 2s-.9 2-2 2h-4V7m5 10h-5v-4h5c1.1 0 2 .9 2 2s-.9 2-2 2" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    Cryptocurrency
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+                <a class="nav-link" href="../dashboard/crm.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M16 4c0-1.11.89-2 2-2s2 .89 2 2s-.89 2-2 2s-2-.89-2-2m4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H17c-.8 0-1.54.37-2.01 1l-3.7 3.7c-.28.28-.44.66-.44 1.06V20h-2v-6c0-.4.16-.78.44-1.06L14.99 9c.47-.63 1.21-1 2.01-1h1.54c.8 0 1.54.37 2.01 1L22.5 16H20v6h-2m-8-2v-6h2v6h-2m-4 0v-6h2v6H8m-4 0v-6h2v6H4" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    CRM
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+                <a class="nav-link" href="../dashboard/pos-system.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2m0 14H4v-6h16v6m0-10H4V6h16v2" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    POS System
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="group">
+              <div class="group-title">
+                <span class="group-title-text sb-label sidebar-label">UI Components</span>
+              </div>
+              <div class="group-content">
+                <div class="sb-dropdown">
+                  <button id="dropdownComponentBtn" type="button" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15L6.04 7.5L12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z" />
+                      </svg>
+                      <span class="sb-label sidebar-label">Component</span>
+                    </span>
+                    <svg id="dropdownComponentIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownComponentMenu" class="sb-menu">
+                    <a href="typography.html" class="sb-item">Typography</a>
+                    <a href="colors.html" class="sb-item">Colors</a>
+                    <a href="alert.html" class="sb-item">Alert</a>
+                    <a href="button.html" class="sb-item">Button</a>
+                    <a href="card.html" class="sb-item">Card</a>
+                    <a href="carousel.html" class="sb-item">Carousel</a>
+                    <a href="dropdown.html" class="sb-item active">Dropdown</a>
+                    <a href="image.html" class="sb-item">Image</a>
+                    <a href="modal.html" class="sb-item">Modal</a>
+                    <a href="progress-bar.html" class="sb-item">Progress bar</a>
+                    <a href="skeleton.html" class="sb-item">Skeleton</a>
+                    <a href="tab-accordion.html" class="sb-item">Tab & Accordion</a>
+                    <a href="badges.html" class="sb-item">Badges</a>
+                    <a href="paginations.html" class="sb-item">Paginations</a>
+                    <a href="video.html" class="sb-item">Video</a>
+                    <a href="input.html" class="sb-item">Input</a>
+                  </div>
+                </div>
+                <div class="sb-dropdown">
+                  <button id="dropdownFormBtn" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true"
+                        role="img"
+                        class="iconify iconify--mdi"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M15 5h3l-1.5 2zM5 2h14a2 2 0 0 1 2 2v16c0 1.11-.89 2-2 2H5a2 2 0 0 1-2 2V4c0-1.1.9-2 2-2m0 2v4h14V4zm0 16h14V10H5zm2-8h10v2H7zm0 4h10v2H7z"></path>
+                      </svg>
+                      <span class="sb-label sidebar-label">Form</span>
+                    </span>
+                    <svg id="dropdownFormIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownFormMenu" class="sb-menu hidden">
+                    <a href="../forms/simple-form.html" class="sb-item">Simple Form</a>
+                    <a href="../forms/expert-form.html" class="sb-item">Expert Form</a>
+                  </div>
+                </div>
+                <div class="sb-dropdown">
+                  <button id="dropdownChartBtn" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true"
+                        role="img"
+                        class="iconify iconify--mdi"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M17.45 15.18L22 7.31V21H2V3h2v12.54L9.5 6L16 9.78l4.24-7.33l1.73 1l-5.23 9.05l-6.51-3.75L4.31 19h2.26l4.39-7.56z"></path>
+                      </svg>
+                      <span class="sb-label sidebar-label">Chart</span>
+                    </span>
+                    <svg id="dropdownChartIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownChartMenu" class="sb-menu hidden">
+                    <a href="../charts/apex.html" class="sb-item">Apex chart</a>
+                    <a href="../charts/chartsjs.html" class="sb-item">Chart js</a>
+                  </div>
+                </div>
+                <div class="sb-dropdown">
+                  <button id="dropdownTableBtn" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true"
+                        role="img"
+                        class="iconify iconify--mdi"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m0 4v4h6V8zm8 0v4h6V8zm-8 6v4h6v-4zm8 0v4h6v-4z"></path>
+                      </svg>
+                      <span class="sb-label sidebar-label">Table</span>
+                    </span>
+                    <svg id="dropdownTableIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownTableMenu" class="sb-menu hidden">
+                    <a href="../tables/basic-table.html" class="sb-item">Basic Table</a>
+                    <a href="../tables/ag-grid-table.html" class="sb-item">Ag Grid Table</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group">
+              <div class="group-title">
+                <span class="group-title-text sb-label sidebar-label">Apps</span>
+              </div>
+              <div class="group-content">
+                <a class="nav-link" href="../pages/settings.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4z" />
+                  </svg>
+                  <span class="sb-label sidebar-label">User Profile</span>
+                </a>
+                <div class="sb-dropdown">
+                  <button id="dropdownAppsBtn" type="button" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4V4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z" />
+                      </svg>
+                      <span class="sb-label sidebar-label">Apps</span>
+                      <span class="sb-badge">Soon</span>
+                    </span>
+                    <svg id="dropdownAppsIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownAppsMenu" class="sb-menu hidden">
+                    <div class="relative">
+                      <button id="dropdownHealthcareBtn" type="button" class="sb-btn">
+                        <span class="flex items-center gap-3">
+                          <span class="flex-1 text-left text-sm sidebar-label">Healthcare</span>
+                        </span>
+                        <svg id="dropdownHealthcareIcon" class="sb-icon-chevron" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                        </svg>
+                      </button>
+                      <div id="dropdownHealthcareMenu" class="pl-4 mt-1 space-y-1 hidden">
+                        <a href="../apps/healthcare/patients.html" class="sb-item">Patients</a>
+                        <a href="../apps/healthcare/patient-details.html" class="sb-item">Patients Details</a>
+                      </div>
+                    </div>
+                    <a href="../apps/chats.html" class="sb-item">Chats</a>
+                    <a href="../apps/music.html" class="sb-item">Music</a>
+                    <a href="../apps/file-manager.html" class="sb-item">File Manager</a>
+                    <a href="../apps/nft-apps.html" class="sb-item">NFT Apps</a>
+                    <a href="../apps/pos-system.html" class="sb-item">POS System</a>
+                  </div>
+                </div>
+                <div class="sb-dropdown">
+                  <button id="dropdownPagesBtn" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true"
+                        role="img"
+                        class="iconify iconify--mdi"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path>
+                      </svg>
+                      <span class="sb-label sidebar-label">Pages</span>
+                    </span>
+                    <svg id="dropdownPagesIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownPagesMenu" class="sb-menu hidden">
+                    <a href="../pages/invoice.html" class="sb-item">Invoice</a>
+                    <a href="../pages/faq.html" class="sb-item">FAQ</a>
+                    <a href="../pages/blank.html" class="sb-item">Blank page</a>
+                    <a href="../pages/404.html" class="sb-item">404 page</a>
+                    <a href="../pages/coming-soon.html" class="sb-item">Coming Soon</a>
+                    <a href="../pages/under-maintenance.html" class="sb-item">Under Maintenance page</a>
+                    <a href="../pages/signin.html" class="sb-item">Sign In</a>
+                    <a href="../pages/signup.html" class="sb-item">Sign Up</a>
+                    <a href="../pages/forget-password.html" class="sb-item">Forget Password</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group-title">
+                <span class="group-title-text sb-label sidebar-label">Others</span>
+              </div>
+              <div class="group-content">
+                <div class="sb-dropdown">
+                  <button id="dropdownMultiLevelBtn" type="button" class="sb-btn">
+                    <span class="flex items-center gap-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4V4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z" />
+                      </svg>
+                      <span class="sb-label sidebar-label">Multi Level</span>
+                    </span>
+                    <svg id="dropdownMultiLevelIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownMultiLevelMenu" class="pl-14 mt-1 space-y-1 hidden text-sm">
+                    <div class="relative">
+                      <button id="dropdownLevel1Btn" type="button" class="sb-btn">
+                        <span>Level 1</span>
+                        <svg id="dropdownLevel1Icon" class="sb-icon-chevron" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                        </svg>
+                      </button>
+                      <div id="dropdownLevel1Menu" class="pl-4 mt-1 space-y-1 hidden">
+                        <div class="relative">
+                          <button id="dropdownLevel2Btn" type="button" class="sb-btn">
+                            <span>Level 2</span>
+                            <svg id="dropdownLevel2Icon" class="sb-icon-chevron" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                            </svg>
+                          </button>
+                          <div id="dropdownLevel2Menu" class="pl-4 mt-1 space-y-1 hidden">
+                            <a href="#" class="sb-item">Level 3 Item 1</a>
+                            <a href="#" class="sb-item">Level 3 Item 2</a>
+                            <a href="#" class="sb-item">Level 3 Item 3</a>
+                          </div>
+                        </div>
+                        <a href="#" class="sb-item">Level 2 Item 1</a>
+                        <a href="#" class="sb-item">Level 2 Item 2</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="nav-link" href="../documentation/index.html" data-discover="true">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                  </svg>
+                  <span class="sb-label sidebar-label">Documentation</span>
+                </a>
+              </div>
+            </div>
+          </nav>
+          <div class="sb-footer">
+            <a id="sidebar-version" href="../version.html" class="sidebar-label">Version: ...</a>
+          </div>
+        </div>
+      </aside>
+      <div id="sidebarOverlay" class="sidebar-overlay"></div>
+      <div id="mainContent" class="layout-main">
+        <header id="headerContent" class="main-header">
+          <div class="main-header-inner">
+            <div class="main-header-left">
+              <button id="headerSidebarToggle" class="sm:hidden p-2 mr-2" aria-label="Open sidebar">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+              <button id="mobileSearchBtn" class="header-mobile-search-btn" aria-label="Show search">
+                <svg class="header-mobile-search-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"></line>
+                </svg>
+              </button>
+              <div id="mobileSearchDiv" class="header-mobile-search-div">
+                <div class="header-mobile-search-inner">
+                  <input id="desktopSearchInput" placeholder="Search..." class="header-mobile-search-input" type="text" />
+                  <span id="iconSearchBtn" class="header-mobile-search-icon-search-btn">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"></line>
+                    </svg>
+                  </span>
+                  <span id="iconSearchInput" class="header-mobile-search-icon-search-input">
+                    <svg viewBox="0 0 20 20" fill="currentColor" style="display: block">
+                      <text x="2" y="15" font-size="13" alignment-baseline="middle" dominant-baseline="middle">⌘+</text>
+                    </svg>
+                    F
+                  </span>
+                  <button id="mobileSearchCloseBtn" class="mobile-search-close-btn md:hidden block" aria-label="Close search">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-header-right">
+              <!-- Dropdown Edit Button Start -->
+              <div class="relative" id="editDropdownWrapper">
+                <button id="editDropdownBtn" class="header-right-btn btn-right-border" aria-label="Edit Settings">
+                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M12 8a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-2 12c-.25 0-.46-.18-.5-.42l-.37-2.65c-.63-.25-1.17-.59-1.69-.99l-2.49 1.01c-.22.08-.49 0-.61-.22l-2-3.46a.493.493 0 0 1 .12-.64l2.11-1.66L4.5 12l.07-1l-2.11-1.63a.493.493 0 0 1-.12-.64l2-3.46c.12-.22.39-.31.61-.22l2.49 1c.52-.39 1.06-.73 1.69-.98l.37-2.65c.04-.24.25-.42.5-.42h4c.25 0 .46.18.5.42l.37 2.65c.63.25 1.17.59 1.69.98l2.49-1c.22-.09.49 0 .61.22l2 3.46c.13.22.07.49-.12.64L19.43 11l.07 1l-.07 1l2.11 1.63c.19.15.25.42.12.64l-2 3.46c-.12.22-.39.31-.61.22l-2.49-1c-.52.39-1.06.73-1.69.98l-.37 2.65c-.04.24-.25.42-.5.42zm1.25-18l-.37 2.61c-1.2.25-2.26.89-3.03 1.78L5.44 7.35l-.75 1.3L6.8 10.2a5.55 5.55 0 0 0 0 3.6l-2.12 1.56l.75 1.3l2.43-1.04c.77.88 1.82 1.52 3.01 1.76l.37 2.62h1.52l.37-2.61c1.19-.25 2.24-.89 3.01-1.77l2.43 1.04l.75-1.3l-2.12-1.55c.4-1.17.4-2.44 0-3.61l2.11-1.55l-.75-1.3l-2.41 1.04a5.42 5.42 0 0 0-3.03-1.77L12.75 4z" />
+                  </svg>
+                </button>
+                <div id="editDropdown" class="dropdown-panel settings-dropdown hidden">
+                  <div class="dropdown-header">Quick Edit</div>
+                  <div class="dropdown-body">
+                    <!-- RTL Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">RTL Mode</span>
+                      <label class="dropdown-switch" for="rtlSwitch">
+                        <input type="checkbox" id="rtlSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- Dark Mode Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">Dark Mode</span>
+                      <label class="dropdown-switch" for="darkSwitch">
+                        <input type="checkbox" id="darkSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- Monochrome Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">Monochrome</span>
+                      <label class="dropdown-switch" for="monoSwitch">
+                        <input type="checkbox" id="monoSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- Collapsed Sidebar Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">Collapsed Sidebar</span>
+                      <label class="dropdown-switch" for="sidebarCollapseSwitch">
+                        <input type="checkbox" id="sidebarCollapseSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- F12 In Developer Mode Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">F12 In Developer Mode</span>
+                      <label class="dropdown-switch" for="f12InDeveloperModeSwitch">
+                        <input type="checkbox" id="f12InDeveloperModeSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- Sidebar Color Radio -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">Sidebar Color</span>
+                      <div class="dropdown-radio" id="sidebarColorRadios">
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="default" class="form-radio text-primary" checked />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="primary" class="form-radio text-primary" />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="success" class="form-radio text-success" />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="danger" class="form-radio text-danger" />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="warning" class="form-radio text-warning" />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="dark" class="form-radio text-dark" />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Dropdown Edit Button End -->
+              <div class="header-right-btn-notif" id="notifDropdownWrapper">
+                <button id="notifBtn" class="header-right-btn">
+                  <span class="absolute -top-1 -right-1 flex items-center justify-center h-4 w-4 rounded-full bg-red-500 text-white text-xs font-bold">2</span>
+                  <svg class="header-right-btn" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                  </svg>
+                </button>
+                <div id="notifDropdown" class="dropdown-panel notif-dropdown hidden">
+                  <div class="dropdown-header">Notifications</div>
+                  <div class="dropdown-body">
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01" />
+                        </svg>
+                      </span>
+                      <div class="dropdown-content">
+                        <h5 class="mb-0">New patient registered</h5>
+                        <p>2 minutes ago</p>
+                      </div>
+                    </div>
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <div class="dropdown-content">
+                        <h5 class="mb-0">Patient data updated successfully.</h5>
+                        <p>10 minutes ago</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown-footer">
+                    <a href="#">View all notifications</a>
+                  </div>
+                </div>
+              </div>
+              <div class="relative inline-block" id="userDropdownWrapper">
+                <div id="avatarBtn" class="relative">
+                  <div class="btn-avatar">J</div>
+                  <span class="dot-online"></span>
+                </div>
+                <div id="userDropdown" class="dropdown-panel avatar-dropdown hidden">
+                  <!-- Baris 1: Foto, Nama, Email -->
+                  <div class="dropdown-profile">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" />
+                    <div>
+                      <h5 class="mb-0">John Doe</h5>
+                      <p class="text-xs">johndoe@email.com</p>
+                    </div>
+                  </div>
+                  <!-- Baris 2: Role Management -->
+                  <div class="dropdown-body -mb-2">
+                    <div class="dropdown-row">
+                      <div class="dropdown-search">
+                        <div class="dropdown-search-icon">
+                          <svg class="dropdown-search-icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="m21 9l-4-4v3h-7v2h7v3M7 11l-4 4l4 4v-3h7v-2H7z" />
+                          </svg>
+                        </div>
+                        <input type="text" id="searchable-select" placeholder="Select a role..." autocomplete="off" value="Doctor" />
+                        <ul id="options-list" class="dropdown-search-list hidden">
+                          <li class="dropdown-search-item">Administrator</li>
+                          <li class="dropdown-search-item">Doctor</li>
+                          <li class="dropdown-search-item">Nurse</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Baris 3: Profile & Settings -->
+                  <div class="dropdown-body">
+                    <a href="#" class="dropdown-row">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 15c2.485 0 4.847.635 6.879 1.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      </svg>
+                      Profile
+                    </a>
+                    <a href="#" class="dropdown-row">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                          fill="currentColor"
+                          d="M12 8a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-2 12c-.25 0-.46-.18-.5-.42l-.37-2.65c-.63-.25-1.17-.59-1.69-.99l-2.49 1.01c-.22.08-.49 0-.61-.22l-2-3.46a.493.493 0 0 1 .12-.64l2.11-1.66L4.5 12l.07-1l-2.11-1.63a.493.493 0 0 1-.12-.64l2-3.46c.12-.22.39-.31.61-.22l2.49 1c.52-.39 1.06-.73 1.69-.98l.37-2.65c.04-.24.25-.42.5-.42h4c.25 0 .46.18.5.42l.37 2.65c.63.25 1.17.59 1.69.98l2.49-1c.22-.09.49 0 .61.22l2 3.46c.13.22.07.49-.12.64L19.43 11l.07 1l-.07 1l2.11 1.63c.19.15.25.42.12.64l-2 3.46c-.12.22-.39.31-.61.22l-2.49-1c-.52.39-1.06.73-1.69.98l-.37 2.65c-.04.24-.25.42-.5.42zm1.25-18l-.37 2.61c-1.2.25-2.26.89-3.03 1.78L5.44 7.35l-.75 1.3L6.8 10.2a5.55 5.55 0 0 0 0 3.6l-2.12 1.56l.75 1.3l2.43-1.04c.77.88 1.82 1.52 3.01 1.76l.37 2.62h1.52l.37-2.61c1.19-.25 2.24-.89 3.01-1.77l2.43 1.04l.75-1.3l-2.12-1.55c.4-1.17.4-2.44 0-3.61l2.11-1.55l-.75-1.3l-2.41 1.04a5.42 5.42 0 0 0-3.03-1.77L12.75 4z" />
+                      </svg>
+                      Settings
+                    </a>
+                    <a href="#" class="dropdown-row">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10 9 9 9 8 9" />
+                      </svg>
+                      Documentation
+                    </a>
+                  </div>
+                  <!-- Baris 4: Logout -->
+                  <div class="dropdown-footer">
+                    <a href="#" class="dropdown-row">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7"></path>
+                      </svg>
+                      Logout
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <div class="main-content">
+            <div class="main-content-inner">
+              <!-- Breadcrumb Start -->
+              <div class="breadcrumb">
+                <nav>
+                  <ol class="breadcrumb-list">
+                    <li>
+                      <a class="breadcrumb-link" href="#">
+                        Home
+                        <svg class="stroke-current" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.0765 12.667L10.2432 8.50033L6.0765 4.33366" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li id="pageName" class="page-name">...</li>
+                  </ol>
+                </nav>
+              </div>
+              <!-- Breadcrumb End -->
+              <div class="flex flex-col md:flex-row gap-2">
+                <div class="card-content w-full">
+                  <div class="card-header">
+                    <h1>
+                      Dropdown
+                      <span class="text-base font-normal">default</span>
+                    </h1>
+                  </div>
+                  <div class="card-body">
+                    <!-- Default Dropdown Container -->
+                    <div>
+                      <div class="my-2 grid grid-cols-1">
+                        <select
+                          id="religion"
+                          name="religion"
+                          autocomplete="religion-name"
+                          class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6 border border-gray-300">
+                          <option value="">Select dropdown</option>
+                          <option value="information">Information</option>
+                          <option value="success">Success</option>
+                          <option value="warning">Warning</option>
+                          <option value="settings">Settings</option>
+                          <option value="other">Other</option>
+                        </select>
+                        <svg
+                          class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+                          viewBox="0 0 16 16"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          data-slot="icon">
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                            clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Kolom 2 -->
+                <div class="card-content w-full">
+                  <div class="card-header">
+                    <h1>
+                      Dropdown
+                      <span class="text-base font-normal">multiselect</span>
+                    </h1>
+                  </div>
+                  <div class="card-body">
+                    <!-- Multiselect Dropdown Container -->
+                    <div class="relative inline-block text-left w-full my-2" id="multiselectDropdownWrapper">
+                      <!-- Dropdown Button -->
+                      <button
+                        type="button"
+                        class="inline-flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        id="multiselectDropdownButton">
+                        <span class="flex flex-wrap gap-1" id="multiselectSelectedItems">
+                          <span class="text-gray-500">Select options</span>
+                        </span>
+                        <svg class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                      </button>
+
+                      <!-- Dropdown Menu -->
+                      <div
+                        class="fixed w-[calc(100%-2rem)] md:w-[calc(50%-1rem)] mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden z-[9999]"
+                        id="multiselectDropdownMenu"
+                        role="menu"
+                        aria-orientation="vertical">
+                        <div class="py-1" role="none">
+                          <div class="px-4 py-2">
+                            <input
+                              type="text"
+                              class="w-full px-3 py-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                              placeholder="Search options..."
+                              id="multiselectDropdownSearch" />
+                          </div>
+                          <div class="max-h-48 overflow-y-auto" id="multiselectDropdownOptions">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" data-value="option1">Option 1</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" data-value="option2">Option 2</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" data-value="option3">Option 3</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" data-value="option4">Option 4</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" data-value="option5">Option 5</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content w-full">
+                <div class="card-header">
+                  <h1>
+                    Calendar
+                    <span class="text-base font-normal">date and time range</span>
+                  </h1>
+                </div>
+                <div class="card-body">
+                  <div class="relative w-full max-w-md px-4 py-4">
+                    <div class="relative">
+                      <input
+                        id="dateInputMain"
+                        readonly
+                        placeholder="Select date & time range"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm bg-white cursor-pointer focus:ring-2 focus:ring-blue-500" />
+                      <input type="hidden" id="backendStart" name="start_datetime" />
+                      <input type="hidden" id="backendEnd" name="end_datetime" />
+                      <!-- Calendar -->
+                      <div
+                        id="calendarPopup"
+                        class="fixed w-[calc(100%-2rem)] md:w-[calc(50%-1rem)] mt-2 origin-top-right w-full max-w-md bg-white p-4 rounded-lg shadow-xl hidden z-[9999] border border-gray-200">
+                        <div class="flex justify-between items-center mb-2">
+                          <div class="flex space-x-2">
+                            <button id="prevMonth" class="text-sm px-2 hover:bg-gray-100 rounded">&#8249;</button>
+                            <button id="nextMonth" class="text-sm px-2 hover:bg-gray-100 rounded">&#8250;</button>
+                          </div>
+                          <div>
+                            <button id="toggleMonth" class="text-sm font-semibold hover:text-blue-600">Month</button>
+                            <button id="toggleYear" class="text-sm font-semibold ml-2 hover:text-blue-600">Year</button>
+                          </div>
+                        </div>
+                        <!-- Month Grid -->
+                        <div id="monthGrid" class="grid grid-cols-3 gap-2 mb-4 hidden"></div>
+                        <!-- Year Grid -->
+                        <div class="flex justify-between items-center mb-2 hidden" id="yearGridNav">
+                          <button id="prevYearPage" class="text-sm px-2 hover:bg-gray-100 rounded">&#8249;</button>
+                          <div class="text-center font-semibold" id="yearPageLabel"></div>
+                          <button id="nextYearPage" class="text-sm px-2 hover:bg-gray-100 rounded">&#8250;</button>
+                        </div>
+                        <div id="yearGrid" class="grid grid-cols-3 gap-2 mb-4 hidden"></div>
+                        <!-- Calendar Days -->
+                        <div id="calendarGrid" class="grid grid-cols-7 gap-1 text-center text-sm text-gray-600 mb-4"></div>
+                        <!-- Time Picker -->
+                        <div class="flex items-center justify-between text-sm space-x-2">
+                          <div class="flex items-center space-x-1">
+                            <label for="startHour">Start:</label>
+                            <select id="startHour" class="border border-gray-300 rounded px-2 py-1"></select>
+                            <span>:</span>
+                            <select id="startMinute" class="border border-gray-300 rounded px-2 py-1"></select>
+                          </div>
+                          <div class="flex items-center space-x-1">
+                            <label for="endHour">End:</label>
+                            <select id="endHour" class="border border-gray-300 rounded px-2 py-1"></select>
+                            <span>:</span>
+                            <select id="endMinute" class="border border-gray-300 rounded px-2 py-1"></select>
+                          </div>
+                        </div>
+                        <div class="text-right mt-2">
+                          <button id="clearSelection" class="text-sm text-blue-500 hover:underline">Clear</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="dynamicInputs" class="mt-2 space-y-2 hidden">
+                    <input id="inputSingle" type="text" placeholder="Single date extra input" class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm bg-white hidden" />
+                    <div id="rangeInputs" class="space-y-2 hidden">
+                      <p>Range start extra input</p>
+                      <input id="inputRangeStart" type="text" placeholder="Range start extra input" class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm bg-white" />
+                      <p>Range end extra input</p>
+                      <input id="inputRangeEnd" type="text" placeholder="Range end extra input" class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm bg-white" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="footer-inner">
+            <p class="footer-text">
+              © 2025 hiraway. Designed with ❤️ by
+              <a href="https://github.com/Arisdolanan" target="_blank" class="text-blue-500">Me (vibe coding)</a>
+              x AI All rights reserved
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="../assets/js/hiraway.js"></script>
+    <script>
+      // === Deklarasi variabel ===
+      const dateInput = document.getElementById('dateInputMain')
+      const calendarPopup = document.getElementById('calendarPopup')
+      const calendarGrid = document.getElementById('calendarGrid')
+      const prevMonthBtn = document.getElementById('prevMonth')
+      const nextMonthBtn = document.getElementById('nextMonth')
+      const startHour = document.getElementById('startHour')
+      const startMinute = document.getElementById('startMinute')
+      const endHour = document.getElementById('endHour')
+      const endMinute = document.getElementById('endMinute')
+      const backendStart = document.getElementById('backendStart')
+      const backendEnd = document.getElementById('backendEnd')
+      const dynamicInputs = document.getElementById('dynamicInputs')
+      const inputSingle = document.getElementById('inputSingle')
+      const rangeInputs = document.getElementById('rangeInputs')
+      const inputRangeStart = document.getElementById('inputRangeStart')
+      const inputRangeEnd = document.getElementById('inputRangeEnd')
+      const toggleMonth = document.getElementById('toggleMonth')
+      const toggleYear = document.getElementById('toggleYear')
+      const monthGrid = document.getElementById('monthGrid')
+      const yearGrid = document.getElementById('yearGrid')
+      const yearGridNav = document.getElementById('yearGridNav')
+      const prevYearPage = document.getElementById('prevYearPage')
+      const nextYearPage = document.getElementById('nextYearPage')
+      const yearPageLabel = document.getElementById('yearPageLabel')
+      const now = new Date()
+      let currentMonth = now.getMonth()
+      let currentYear = now.getFullYear()
+      let selectedStart = null
+      let selectedEnd = null
+      let yearPageStart = currentYear - 4
+      // === Fungsi ===
+      function fillSelect(select, max) {
+        select.innerHTML = ''
+        for (let i = 0; i <= max; i++) {
+          const opt = document.createElement('option')
+          opt.value = i.toString()
+          opt.textContent = i.toString().padStart(2, '0')
+          select.appendChild(opt)
+        }
+      }
+
+      function formatDate(d) {
+        const year = d.getFullYear()
+        const month = (d.getMonth() + 1).toString().padStart(2, '0')
+        const day = d.getDate().toString().padStart(2, '0')
+        return `${year}-${month}-${day}`
+      }
+
+      function isInRange(dateStr) {
+        if (!selectedStart || !selectedEnd) return false
+        return dateStr >= selectedStart && dateStr <= selectedEnd
+      }
+
+      function updateDynamicInputs() {
+        dynamicInputs.classList.remove('hidden')
+        if (selectedStart && selectedEnd) {
+          inputSingle.classList.add('hidden')
+          rangeInputs.classList.remove('hidden')
+        } else if (selectedStart && !selectedEnd) {
+          inputSingle.classList.remove('hidden')
+          rangeInputs.classList.add('hidden')
+        } else {
+          dynamicInputs.classList.add('hidden')
+        }
+      }
+
+      function buildCalendar(year, month) {
+        calendarGrid.innerHTML = ''
+        const weekdays = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
+        weekdays.forEach((day) => {
+          const cell = document.createElement('div')
+          cell.textContent = day
+          cell.className = 'font-semibold text-gray-500'
+          calendarGrid.appendChild(cell)
+        })
+        const firstDay = new Date(year, month, 1).getDay()
+        const lastDate = new Date(year, month + 1, 0).getDate()
+        for (let i = 0; i < firstDay; i++) {
+          calendarGrid.appendChild(document.createElement('div'))
+        }
+        for (let day = 1; day <= lastDate; day++) {
+          const cell = document.createElement('div')
+          const fullDate = new Date(year, month, day)
+          const dateStr = formatDate(fullDate)
+          cell.textContent = day
+          cell.className = 'custom-day p-1 rounded cursor-pointer'
+          if (isInRange(dateStr) || dateStr === selectedStart) {
+            cell.classList.add('selected')
+          }
+          cell.addEventListener('click', (e) => {
+            e.stopPropagation()
+            if (!selectedStart || (selectedStart && selectedEnd)) {
+              selectedStart = dateStr
+              selectedEnd = null
+            } else {
+              if (dateStr < selectedStart) {
+                selectedEnd = selectedStart
+                selectedStart = dateStr
+              } else {
+                selectedEnd = dateStr
+              }
+            }
+            const sHour = startHour.value.padStart(2, '0')
+            const sMin = startMinute.value.padStart(2, '0')
+            const eHour = endHour.value.padStart(2, '0')
+            const eMin = endMinute.value.padStart(2, '0')
+            if (selectedStart && selectedEnd) {
+              dateInput.value = `${selectedStart} ${sHour}:${sMin} to ${selectedEnd} ${eHour}:${eMin}`
+              backendStart.value = `${selectedStart}T${sHour}:${sMin}:00`
+              backendEnd.value = `${selectedEnd}T${eHour}:${eMin}:00`
+              inputSingle.value = ''
+              inputRangeStart.value = `${selectedStart} ${sHour}:${sMin}`
+              inputRangeEnd.value = `${selectedEnd} ${eHour}:${eMin}`
+            } else if (selectedStart) {
+              dateInput.value = `${selectedStart} ${sHour}:${sMin}`
+              backendStart.value = `${selectedStart}T${sHour}:${sMin}:00`
+              backendEnd.value = ''
+              inputSingle.value = `${selectedStart} ${sHour}:${sMin}`
+              inputRangeStart.value = ''
+              inputRangeEnd.value = ''
+            } else {
+              dateInput.value = ''
+              backendStart.value = ''
+              backendEnd.value = ''
+              inputSingle.value = ''
+              inputRangeStart.value = ''
+              inputRangeEnd.value = ''
+            }
+            buildCalendar(currentYear, currentMonth)
+            updateDynamicInputs()
+          })
+          calendarGrid.appendChild(cell)
+        }
+      }
+
+      function buildMonthGrid() {
+        monthGrid.innerHTML = ''
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        monthNames.forEach((m, i) => {
+          const btn = document.createElement('button')
+          btn.textContent = m
+          btn.className = 'p-2 rounded hover:bg-blue-500 hover:text-white text-sm'
+          if (i === currentMonth) {
+            btn.classList.add('font-bold', 'bg-blue-200')
+          }
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation()
+            currentMonth = i
+            buildCalendar(currentYear, currentMonth)
+            monthGrid.classList.add('hidden')
+            updateToggleTexts()
+          })
+          monthGrid.appendChild(btn)
+        })
+      }
+
+      function buildYearGrid() {
+        yearGrid.innerHTML = ''
+        yearPageLabel.textContent = `${yearPageStart} - ${yearPageStart + 8}`
+        for (let y = yearPageStart; y <= yearPageStart + 8; y++) {
+          const btn = document.createElement('button')
+          btn.textContent = y
+          btn.className = 'p-2 rounded hover:bg-blue-500 hover:text-white text-sm'
+          if (y === currentYear) {
+            btn.classList.add('font-bold', 'bg-blue-200')
+          }
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation()
+            currentYear = y
+            buildCalendar(currentYear, currentMonth)
+            yearGrid.classList.add('hidden')
+            yearGridNav.classList.add('hidden')
+            updateToggleTexts()
+          })
+          yearGrid.appendChild(btn)
+        }
+      }
+      // Toggle Month & Year grids show/hide
+      toggleMonth.addEventListener('click', (e) => {
+        e.stopPropagation()
+        const isMonthVisible = !monthGrid.classList.contains('hidden')
+        if (isMonthVisible) {
+          monthGrid.classList.add('hidden')
+        } else {
+          buildMonthGrid()
+          monthGrid.classList.remove('hidden')
+          yearGrid.classList.add('hidden')
+          yearGridNav.classList.add('hidden')
+        }
+        updateToggleTexts()
+      })
+      toggleYear.addEventListener('click', (e) => {
+        e.stopPropagation()
+        const isYearVisible = !yearGrid.classList.contains('hidden')
+        if (isYearVisible) {
+          yearGrid.classList.add('hidden')
+          yearGridNav.classList.add('hidden')
+        } else {
+          buildYearGrid()
+          yearGrid.classList.remove('hidden')
+          yearGridNav.classList.remove('hidden')
+          monthGrid.classList.add('hidden')
+        }
+        updateToggleTexts()
+      })
+
+      function updateToggleTexts() {
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        const isMonthVisible = !monthGrid.classList.contains('hidden')
+        const isYearVisible = !yearGrid.classList.contains('hidden')
+        if (isMonthVisible) {
+          toggleMonth.textContent = `Month (${monthNames[currentMonth]})`
+          toggleMonth.classList.add('custom-calendar-toggle-active')
+        } else {
+          toggleMonth.textContent = `Month (${monthNames[currentMonth]})`
+          toggleMonth.classList.remove('custom-calendar-toggle-active')
+        }
+        if (isYearVisible) {
+          toggleYear.textContent = `Year (${currentYear})`
+          toggleYear.classList.add('custom-calendar-toggle-active')
+        } else {
+          toggleYear.textContent = `Year (${currentYear})`
+          toggleYear.classList.remove('custom-calendar-toggle-active')
+        }
+      }
+      // Year grid paging
+      prevYearPage.addEventListener('click', (e) => {
+        e.stopPropagation()
+        yearPageStart -= 9
+        buildYearGrid()
+      })
+      nextYearPage.addEventListener('click', (e) => {
+        e.stopPropagation()
+        yearPageStart += 9
+        buildYearGrid()
+      })
+      // Time picker fill
+      fillSelect(startHour, 23)
+      fillSelect(startMinute, 59)
+      fillSelect(endHour, 23)
+      fillSelect(endMinute, 59)
+      ;[startHour, startMinute, endHour, endMinute].forEach((el) => {
+        el.addEventListener('change', () => {
+          const formatTime = (hourEl, minuteEl) => {
+            return `${hourEl.value.padStart(2, '0')}:${minuteEl.value.padStart(2, '0')}`
+          }
+          if (selectedStart && !selectedEnd) {
+            const startTime = formatTime(startHour, startMinute)
+            inputSingle.value = `${selectedStart} ${startTime}`
+            dateInput.value = inputSingle.value
+            backendStart.value = `${selectedStart}T${startTime}:00`
+          } else if (selectedStart && selectedEnd) {
+            const startTime = formatTime(startHour, startMinute)
+            const endTime = formatTime(endHour, endMinute)
+            inputRangeStart.value = `${selectedStart} ${startTime}`
+            inputRangeEnd.value = `${selectedEnd} ${endTime}`
+            dateInput.value = `${selectedStart} ${startTime} to ${selectedEnd} ${endTime}`
+            backendStart.value = `${selectedStart}T${startTime}:00`
+            backendEnd.value = `${selectedEnd}T${endTime}:00`
+          }
+        })
+      })
+      // Clear button
+      document.getElementById('clearSelection').addEventListener('click', (e) => {
+        selectedStart = null
+        selectedEnd = null
+        dateInput.value = ''
+        backendStart.value = ''
+        backendEnd.value = ''
+        inputSingle.value = ''
+        inputRangeStart.value = ''
+        inputRangeEnd.value = ''
+        dynamicInputs.classList.add('hidden')
+        buildCalendar(currentYear, currentMonth)
+      })
+      // Show calendar popup when clicking on input
+      dateInput.addEventListener('click', (e) => {
+        e.stopPropagation()
+        calendarPopup.classList.toggle('hidden')
+      })
+      // Close calendar if clicked outside
+      document.addEventListener('click', () => {
+        calendarPopup.classList.add('hidden')
+        monthGrid.classList.add('hidden')
+        yearGrid.classList.add('hidden')
+        yearGridNav.classList.add('hidden')
+        updateToggleTexts()
+      })
+      // Navigation buttons month
+      prevMonthBtn.addEventListener('click', (e) => {
+        e.stopPropagation()
+        if (currentMonth === 0) {
+          currentMonth = 11
+          currentYear--
+        } else {
+          currentMonth--
+        }
+        buildCalendar(currentYear, currentMonth)
+      })
+      nextMonthBtn.addEventListener('click', (e) => {
+        e.stopPropagation()
+        if (currentMonth === 11) {
+          currentMonth = 0
+          currentYear++
+        } else {
+          currentMonth++
+        }
+        buildCalendar(currentYear, currentMonth)
+      })
+      // Initial build
+      buildCalendar(currentYear, currentMonth)
+      updateDynamicInputs()
+      updateToggleTexts()
+    </script>
+  </body>
+</html>

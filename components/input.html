@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>hiraway - Clean. Minimal. Powerful Admin Template</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link href="../assets/styles/hiraway.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/masky-js/dist/masky.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+  </head>
+  <body>
+    <!-- Loading indicator -->
+    <div id="page-loader">
+      <div class="loader"></div>
+    </div>
+    <div class="layout-base">
+      <aside class="sidebar-base sidebar-default" id="sidebar">
+        <div class="sidebar-inner">
+          <div class="sidebar-header">
+            <div class="sidebar-logo">
+              <span class="sidebar-label">hiraway</span>
+            </div>
+            <button
+              class="sidebar-toggle absolute top-4 right-4 flex items-center justify-center w-10 h-10 transition text-gray-800 dark:text-gray-100 focus:outline-none rounded-lg"
+              id="sidebarToggle"
+              aria-label="Toggle sidebar">
+              <svg class="block" height="24" id="sidebarOpenIcon" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9 3.5v17M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"></path>
+              </svg>
+              <svg class="hidden" height="24" id="sidebarClosedIcon" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.367 2.25h5.266c1.092 0 1.958 0 2.655.057c.714.058 1.317.18 1.869.46a4.75 4.75 0 0 1 2.075 2.077c.281.55.403 1.154.461 1.868c.057.697.057 1.563.057 2.655v5.266c0 1.092 0 1.958-.057 2.655c-.058.714-.18 1.317-.46 1.869a4.75 4.75 0 0 1-2.076 2.075c-.552.281-1.155.403-1.869.461c-.697.057-1.563.057-2.655.057H9.367c-1.092 0-1.958 0-2.655-.057c-.714-.058-1.317-.18-1.868-.46a4.75 4.75 0 0 1-2.076-2.076c-.281-.552-.403-1.155-.461-1.869c-.057-.697-.057-1.563-.057-2.655V9.367c0-1.092 0-1.958.057-2.655c.058-.714.18-1.317.46-1.868a4.75 4.75 0 0 1 2.077-2.076c.55-.281 1.154-.403 1.868-.461c.697-.057 1.563-.057 2.655-.057M6.834 3.802c-.62.05-1.005.147-1.31.302a3.25 3.25 0 0 0-1.42 1.42c-.155.305-.251.69-.302 1.31c-.051.63-.052 1.434-.052 2.566v5.2c0 1.133 0 1.937.052 2.566c.05.62.147 1.005.302 1.31a3.25 3.25 0 0 0 1.42 1.42c.305.155.69.251 1.31.302c.392.032.851.044 1.416.05V3.752c-.565.005-1.024.017-1.416.049"
+                  fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+          <nav class="nav-menu">
+            <div class="group">
+              <div class="group-title">
+                <span class="group-title-text sb-label sidebar-label">Dashboard</span>
+              </div>
+              <div class="group-content">
+                <a class="nav-link" href="../index.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6m7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58z" />
+                  </svg>
+                  <span class="sb-label sidebar-label">HealthCare</span>
+                </a>
+                <a class="nav-link" href="../dashboard/education.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09v6h2V9zM17 15.99l-5 2.73l-5-2.73v-3.72L12 15l5-2.73z" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    Education
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+                <a class="nav-link" href="../dashboard/analytics.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M3 17h3v-7H3v7zm5 0h3V7H8v10zm5 0h3v-4h-3v4zm5 0h3V4h-3v13z" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    Analytics
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+
+                <a class="nav-link" href="../dashboard/cryptocurrency.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M17.06 11.57C17.65 10.88 18 9.98 18 9c0-1.86-1.27-3.43-3-3.87V3h-2v2h-2V3H9v2H6v2h2v10H6v2h3v2h2v-2h2v2h2v-2c2.21 0 4-1.79 4-4c0-1.45-.78-2.73-1.94-3.43M10 7h4c1.1 0 2 .9 2 2s-.9 2-2 2h-4V7m5 10h-5v-4h5c1.1 0 2 .9 2 2s-.9 2-2 2" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    Cryptocurrency
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+                <a class="nav-link" href="../dashboard/crm.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M16 4c0-1.11.89-2 2-2s2 .89 2 2s-.89 2-2 2s-2-.89-2-2m4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H17c-.8 0-1.54.37-2.01 1l-3.7 3.7c-.28.28-.44.66-.44 1.06V20h-2v-6c0-.4.16-.78.44-1.06L14.99 9c.47-.63 1.21-1 2.01-1h1.54c.8 0 1.54.37 2.01 1L22.5 16H20v6h-2m-8-2v-6h2v6h-2m-4 0v-6h2v6H8m-4 0v-6h2v6H4" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    CRM
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+                <a class="nav-link" href="../dashboard/pos-system.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2m0 14H4v-6h16v6m0-10H4V6h16v2" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    POS System
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="group">
+              <div class="group-title">
+                <span class="group-title-text sb-label sidebar-label">UI Components</span>
+              </div>
+              <div class="group-content">
+                <div class="sb-dropdown">
+                  <button id="dropdownComponentBtn" type="button" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15L6.04 7.5L12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z" />
+                      </svg>
+                      <span class="sb-label sidebar-label">Component</span>
+                    </span>
+                    <svg id="dropdownComponentIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownComponentMenu" class="sb-menu">
+                    <a href="typography.html" class="sb-item">Typography</a>
+                    <a href="colors.html" class="sb-item">Colors</a>
+                    <a href="alert.html" class="sb-item">Alert</a>
+                    <a href="button.html" class="sb-item">Button</a>
+                    <a href="card.html" class="sb-item">Card</a>
+                    <a href="carousel.html" class="sb-item">Carousel</a>
+                    <a href="dropdown.html" class="sb-item">Dropdown</a>
+                    <a href="image.html" class="sb-item">Image</a>
+                    <a href="modal.html" class="sb-item">Modal</a>
+                    <a href="progress-bar.html" class="sb-item">Progress bar</a>
+                    <a href="skeleton.html" class="sb-item">Skeleton</a>
+                    <a href="tab-accordion.html" class="sb-item">Tab & Accordion</a>
+                    <a href="badges.html" class="sb-item">Badges</a>
+                    <a href="paginations.html" class="sb-item">Paginations</a>
+                    <a href="video.html" class="sb-item">Video</a>
+                    <a href="input.html" class="sb-item active">Input</a>
+                  </div>
+                </div>
+                <div class="sb-dropdown">
+                  <button id="dropdownFormBtn" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true"
+                        role="img"
+                        class="iconify iconify--mdi"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M15 5h3l-1.5 2zM5 2h14a2 2 0 0 1 2 2v16c0 1.11-.89 2-2 2H5a2 2 0 0 1-2 2V4c0-1.1.9-2 2-2m0 2v4h14V4zm0 16h14V10H5zm2-8h10v2H7zm0 4h10v2H7z"></path>
+                      </svg>
+                      <span class="sb-label sidebar-label">Form</span>
+                    </span>
+                    <svg id="dropdownFormIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownFormMenu" class="sb-menu hidden">
+                    <a href="../forms/simple-form.html" class="sb-item">Simple Form</a>
+                    <a href="../forms/expert-form.html" class="sb-item">Expert Form</a>
+                  </div>
+                </div>
+                <div class="sb-dropdown">
+                  <button id="dropdownChartBtn" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true"
+                        role="img"
+                        class="iconify iconify--mdi"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M17.45 15.18L22 7.31V21H2V3h2v12.54L9.5 6L16 9.78l4.24-7.33l1.73 1l-5.23 9.05l-6.51-3.75L4.31 19h2.26l4.39-7.56z"></path>
+                      </svg>
+                      <span class="sb-label sidebar-label">Chart</span>
+                    </span>
+                    <svg id="dropdownChartIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownChartMenu" class="sb-menu hidden">
+                    <a href="../charts/apex.html" class="sb-item">Apex chart</a>
+                    <a href="../charts/chartsjs.html" class="sb-item">Chart js</a>
+                  </div>
+                </div>
+                <div class="sb-dropdown">
+                  <button id="dropdownTableBtn" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true"
+                        role="img"
+                        class="iconify iconify--mdi"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m0 4v4h6V8zm8 0v4h6V8zm-8 6v4h6v-4zm8 0v4h6v-4z"></path>
+                      </svg>
+                      <span class="sb-label sidebar-label">Table</span>
+                    </span>
+                    <svg id="dropdownTableIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownTableMenu" class="sb-menu hidden">
+                    <a href="../tables/basic-table.html" class="sb-item">Basic Table</a>
+                    <a href="../tables/ag-grid-table.html" class="sb-item">Ag Grid Table</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group">
+              <div class="group-title">
+                <span class="group-title-text sb-label sidebar-label">Apps</span>
+              </div>
+              <div class="group-content">
+                <a class="nav-link" href="../pages/settings.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4z" />
+                  </svg>
+                  <span class="sb-label sidebar-label">User Profile</span>
+                </a>
+                <div class="sb-dropdown">
+                  <button id="dropdownAppsBtn" type="button" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4V4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z" />
+                      </svg>
+                      <span class="sb-label sidebar-label">Apps</span>
+                      <span class="sb-badge">Soon</span>
+                    </span>
+                    <svg id="dropdownAppsIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownAppsMenu" class="sb-menu hidden">
+                    <div class="relative">
+                      <button id="dropdownHealthcareBtn" type="button" class="sb-btn">
+                        <span class="flex items-center gap-3">
+                          <span class="flex-1 text-left sidebar-label">Healthcare</span>
+                        </span>
+                        <svg id="dropdownHealthcareIcon" class="sb-icon-chevron" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                        </svg>
+                      </button>
+                      <div id="dropdownHealthcareMenu" class="pl-4 mt-1 space-y-1 hidden">
+                        <a href="../apps/healthcare/patients.html" class="sb-item">Patients</a>
+                        <a href="../apps/healthcare/patient-details.html" class="sb-item">Patients Details</a>
+                      </div>
+                    </div>
+                    <a href="../apps/chats.html" class="sb-item">Chats</a>
+                    <a href="../apps/music.html" class="sb-item">Music</a>
+                    <a href="../apps/file-manager.html" class="sb-item">File Manager</a>
+                    <a href="../apps/nft-apps.html" class="sb-item">NFT Apps</a>
+                    <a href="../apps/pos-system.html" class="sb-item">POS System</a>
+                  </div>
+                </div>
+                <div class="sb-dropdown">
+                  <button id="dropdownPagesBtn" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true"
+                        role="img"
+                        class="iconify iconify--mdi"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path>
+                      </svg>
+                      <span class="sb-label sidebar-label">Pages</span>
+                    </span>
+                    <svg id="dropdownPagesIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownPagesMenu" class="sb-menu hidden">
+                    <a href="../pages/invoice.html" class="sb-item">Invoice</a>
+                    <a href="../pages/faq.html" class="sb-item">FAQ</a>
+                    <a href="../pages/blank.html" class="sb-item">Blank page</a>
+                    <a href="../pages/404.html" class="sb-item">404 page</a>
+                    <a href="../pages/coming-soon.html" class="sb-item">Coming Soon</a>
+                    <a href="../pages/under-maintenance.html" class="sb-item">Under Maintenance page</a>
+                    <a href="../pages/signin.html" class="sb-item">Sign In</a>
+                    <a href="../pages/signup.html" class="sb-item">Sign Up</a>
+                    <a href="../pages/forget-password.html" class="sb-item">Forget Password</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group-title">
+                <span class="group-title-text sb-label sidebar-label">Others</span>
+              </div>
+              <div class="group-content">
+                <div class="sb-dropdown">
+                  <button id="dropdownMultiLevelBtn" type="button" class="sb-btn">
+                    <span class="flex items-center gap-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4V4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z" />
+                      </svg>
+                      <span class="sb-label sidebar-label">Multi Level</span>
+                    </span>
+                    <svg id="dropdownMultiLevelIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownMultiLevelMenu" class="pl-14 mt-1 space-y-1 hidden">
+                    <div class="relative">
+                      <button id="dropdownLevel1Btn" type="button" class="sb-btn">
+                        <span>Level 1</span>
+                        <svg id="dropdownLevel1Icon" class="sb-icon-chevron" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                        </svg>
+                      </button>
+                      <div id="dropdownLevel1Menu" class="pl-4 mt-1 space-y-1 hidden">
+                        <div class="relative">
+                          <button id="dropdownLevel2Btn" type="button" class="sb-btn">
+                            <span>Level 2</span>
+                            <svg id="dropdownLevel2Icon" class="sb-icon-chevron" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                            </svg>
+                          </button>
+                          <div id="dropdownLevel2Menu" class="pl-4 mt-1 space-y-1 hidden">
+                            <a href="#" class="sb-item">Level 3 Item 1</a>
+                            <a href="#" class="sb-item">Level 3 Item 2</a>
+                            <a href="#" class="sb-item">Level 3 Item 3</a>
+                          </div>
+                        </div>
+                        <a href="#" class="sb-item">Level 2 Item 1</a>
+                        <a href="#" class="sb-item">Level 2 Item 2</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="nav-link" href="../documentation/index.html" data-discover="true">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                  </svg>
+                  <span class="sb-label sidebar-label">Documentation</span>
+                </a>
+              </div>
+            </div>
+          </nav>
+          <div class="sb-footer">
+            <a id="sidebar-version" href="../version.html" class="sidebar-label">Version: ...</a>
+          </div>
+        </div>
+      </aside>
+      <div id="sidebarOverlay" class="sidebar-overlay"></div>
+      <div id="mainContent" class="layout-main">
+        <header id="headerContent" class="main-header">
+          <div class="main-header-inner">
+            <div class="main-header-left">
+              <button id="headerSidebarToggle" class="sm:hidden p-2 mr-2" aria-label="Open sidebar">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+              <button id="mobileSearchBtn" class="header-mobile-search-btn" aria-label="Show search">
+                <svg class="header-mobile-search-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"></line>
+                </svg>
+              </button>
+              <div id="mobileSearchDiv" class="header-mobile-search-div">
+                <div class="header-mobile-search-inner">
+                  <input id="desktopSearchInput" placeholder="Search..." class="header-mobile-search-input" type="text" />
+                  <span id="iconSearchBtn" class="header-mobile-search-icon-search-btn">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"></line>
+                    </svg>
+                  </span>
+                  <span id="iconSearchInput" class="header-mobile-search-icon-search-input">
+                    <svg viewBox="0 0 20 20" fill="currentColor" style="display: block">
+                      <text x="2" y="15" font-size="13" alignment-baseline="middle" dominant-baseline="middle">⌘+</text>
+                    </svg>
+                    F
+                  </span>
+                  <button id="mobileSearchCloseBtn" class="mobile-search-close-btn md:hidden block" aria-label="Close search">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-header-right">
+              <!-- Dropdown Edit Button Start -->
+              <div class="relative" id="editDropdownWrapper">
+                <button id="editDropdownBtn" class="header-right-btn btn-right-border" aria-label="Edit Settings">
+                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M12 8a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-2 12c-.25 0-.46-.18-.5-.42l-.37-2.65c-.63-.25-1.17-.59-1.69-.99l-2.49 1.01c-.22.08-.49 0-.61-.22l-2-3.46a.493.493 0 0 1 .12-.64l2.11-1.66L4.5 12l.07-1l-2.11-1.63a.493.493 0 0 1-.12-.64l2-3.46c.12-.22.39-.31.61-.22l2.49 1c.52-.39 1.06-.73 1.69-.98l.37-2.65c.04-.24.25-.42.5-.42h4c.25 0 .46.18.5.42l.37 2.65c.63.25 1.17.59 1.69.98l2.49-1c.22-.09.49 0 .61.22l2 3.46c.13.22.07.49-.12.64L19.43 11l.07 1l-.07 1l2.11 1.63c.19.15.25.42.12.64l-2 3.46c-.12.22-.39.31-.61.22l-2.49-1c-.52.39-1.06.73-1.69.98l-.37 2.65c-.04.24-.25.42-.5.42zm1.25-18l-.37 2.61c-1.2.25-2.26.89-3.03 1.78L5.44 7.35l-.75 1.3L6.8 10.2a5.55 5.55 0 0 0 0 3.6l-2.12 1.56l.75 1.3l2.43-1.04c.77.88 1.82 1.52 3.01 1.76l.37 2.62h1.52l.37-2.61c1.19-.25 2.24-.89 3.01-1.77l2.43 1.04l.75-1.3l-2.12-1.55c.4-1.17.4-2.44 0-3.61l2.11-1.55l-.75-1.3l-2.41 1.04a5.42 5.42 0 0 0-3.03-1.77L12.75 4z" />
+                  </svg>
+                </button>
+                <div id="editDropdown" class="dropdown-panel settings-dropdown hidden">
+                  <div class="dropdown-header">Quick Edit</div>
+                  <div class="dropdown-body">
+                    <!-- RTL Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">RTL Mode</span>
+                      <label class="dropdown-switch" for="rtlSwitch">
+                        <input type="checkbox" id="rtlSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- Dark Mode Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">Dark Mode</span>
+                      <label class="dropdown-switch" for="darkSwitch">
+                        <input type="checkbox" id="darkSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- Monochrome Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">Monochrome</span>
+                      <label class="dropdown-switch" for="monoSwitch">
+                        <input type="checkbox" id="monoSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- Collapsed Sidebar Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">Collapsed Sidebar</span>
+                      <label class="dropdown-switch" for="sidebarCollapseSwitch">
+                        <input type="checkbox" id="sidebarCollapseSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- F12 In Developer Mode Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">F12 In Developer Mode</span>
+                      <label class="dropdown-switch" for="f12InDeveloperModeSwitch">
+                        <input type="checkbox" id="f12InDeveloperModeSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- Sidebar Color Radio -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">Sidebar Color</span>
+                      <div class="dropdown-radio" id="sidebarColorRadios">
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="default" class="form-radio text-primary" checked />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="primary" class="form-radio text-primary" />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="success" class="form-radio text-success" />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="danger" class="form-radio text-danger" />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="warning" class="form-radio text-warning" />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="dark" class="form-radio text-dark" />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Dropdown Edit Button End -->
+              <div class="header-right-btn-notif" id="notifDropdownWrapper">
+                <button id="notifBtn" class="header-right-btn">
+                  <span class="absolute -top-1 -right-1 flex items-center justify-center h-4 w-4 rounded-full bg-red-500 text-white text-xs font-bold">2</span>
+                  <svg class="header-right-btn" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                  </svg>
+                </button>
+                <div id="notifDropdown" class="dropdown-panel notif-dropdown hidden">
+                  <div class="dropdown-header">Notifications</div>
+                  <div class="dropdown-body">
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01" />
+                        </svg>
+                      </span>
+                      <div class="dropdown-content">
+                        <h5 class="mb-0">New patient registered</h5>
+                        <p>2 minutes ago</p>
+                      </div>
+                    </div>
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <div class="dropdown-content">
+                        <h5 class="mb-0">Patient data updated successfully.</h5>
+                        <p>10 minutes ago</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown-footer">
+                    <a href="#">View all notifications</a>
+                  </div>
+                </div>
+              </div>
+              <div class="relative inline-block" id="userDropdownWrapper">
+                <div id="avatarBtn" class="relative">
+                  <div class="btn-avatar">J</div>
+                  <span class="dot-online"></span>
+                </div>
+                <div id="userDropdown" class="dropdown-panel avatar-dropdown hidden">
+                  <!-- Baris 1: Foto, Nama, Email -->
+                  <div class="dropdown-profile">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" />
+                    <div>
+                      <h5 class="mb-0">John Doe</h5>
+                      <p class="text-xs">johndoe@email.com</p>
+                    </div>
+                  </div>
+                  <!-- Baris 2: Role Management -->
+                  <div class="dropdown-body -mb-2">
+                    <div class="dropdown-row">
+                      <div class="dropdown-search">
+                        <div class="dropdown-search-icon">
+                          <svg class="dropdown-search-icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="m21 9l-4-4v3h-7v2h7v3M7 11l-4 4l4 4v-3h7v-2H7z" />
+                          </svg>
+                        </div>
+                        <input type="text" id="searchable-select" placeholder="Select a role..." autocomplete="off" value="Doctor" />
+                        <ul id="options-list" class="dropdown-search-list hidden">
+                          <li class="dropdown-search-item">Administrator</li>
+                          <li class="dropdown-search-item">Doctor</li>
+                          <li class="dropdown-search-item">Nurse</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Baris 3: Profile & Settings -->
+                  <div class="dropdown-body">
+                    <a href="#" class="dropdown-row">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 15c2.485 0 4.847.635 6.879 1.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      </svg>
+                      Profile
+                    </a>
+                    <a href="#" class="dropdown-row">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                          fill="currentColor"
+                          d="M12 8a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-2 12c-.25 0-.46-.18-.5-.42l-.37-2.65c-.63-.25-1.17-.59-1.69-.99l-2.49 1.01c-.22.08-.49 0-.61-.22l-2-3.46a.493.493 0 0 1 .12-.64l2.11-1.66L4.5 12l.07-1l-2.11-1.63a.493.493 0 0 1-.12-.64l2-3.46c.12-.22.39-.31.61-.22l2.49 1c.52-.39 1.06-.73 1.69-.98l.37-2.65c.04-.24.25-.42.5-.42h4c.25 0 .46.18.5.42l.37 2.65c.63.25 1.17.59 1.69.98l2.49-1c.22-.09.49 0 .61.22l2 3.46c.13.22.07.49-.12.64L19.43 11l.07 1l-.07 1l2.11 1.63c.19.15.25.42.12.64l-2 3.46c-.12.22-.39.31-.61.22l-2.49-1c-.52.39-1.06.73-1.69.98l-.37 2.65c-.04.24-.25.42-.5.42zm1.25-18l-.37 2.61c-1.2.25-2.26.89-3.03 1.78L5.44 7.35l-.75 1.3L6.8 10.2a5.55 5.55 0 0 0 0 3.6l-2.12 1.56l.75 1.3l2.43-1.04c.77.88 1.82 1.52 3.01 1.76l.37 2.62h1.52l.37-2.61c1.19-.25 2.24-.89 3.01-1.77l2.43 1.04l.75-1.3l-2.12-1.55c.4-1.17.4-2.44 0-3.61l2.11-1.55l-.75-1.3l-2.41 1.04a5.42 5.42 0 0 0-3.03-1.77L12.75 4z" />
+                      </svg>
+                      Settings
+                    </a>
+                    <a href="#" class="dropdown-row">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10 9 9 9 8 9" />
+                      </svg>
+                      Documentation
+                    </a>
+                  </div>
+                  <!-- Baris 4: Logout -->
+                  <div class="dropdown-footer">
+                    <a href="#" class="dropdown-row">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7"></path>
+                      </svg>
+                      Logout
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <div class="main-content">
+            <div class="main-content-inner">
+              <!-- Breadcrumb Start -->
+              <div class="breadcrumb">
+                <nav>
+                  <ol class="breadcrumb-list">
+                    <li>
+                      <a class="breadcrumb-link" href="#">
+                        Home
+                        <svg class="stroke-current" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.0765 12.667L10.2432 8.50033L6.0765 4.33366" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li id="pageName" class="page-name">...</li>
+                  </ol>
+                </nav>
+              </div>
+              <!-- Breadcrumb End -->
+              <div class="flex flex-col md:flex-row gap-2">
+                <div class="card-content w-full">
+                  <div class="card-header">
+                    <h1 class="text-lg font-semibold text-gray-800 dark:text-white">
+                      Input
+                      <span class="text-base font-normal text-gray-500 dark:text-gray-400">Components</span>
+                    </h1>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
+                    <!-- Basic Input -->
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Basic Input</label>
+                      <input
+                        class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                        placeholder="Basic input"
+                        type="text" />
+                    </div>
+
+                    <!-- Label Input -->
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Label Input</label>
+                      <div class="flex flex-col gap-1">
+                        <span class="text-gray-600">Choose Username:</span>
+                        <input
+                          class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                          placeholder="Username"
+                          type="text" />
+                      </div>
+                    </div>
+
+                    <!-- Rounded Input -->
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Rounded Input</label>
+                      <input
+                        class="form-input w-full rounded-full border border-slate-300 bg-transparent px-4 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                        placeholder="Rounded input"
+                        type="text" />
+                    </div>
+
+                    <!-- Filled Input -->
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Filled Input</label>
+                      <input
+                        class="form-input w-full rounded-lg bg-slate-150 px-3 py-2 ring-primary/50 placeholder:text-slate-400 hover:bg-slate-200 focus:ring-3 dark:bg-navy-900/90 dark:ring-accent/50 dark:placeholder:text-navy-300 dark:hover:bg-navy-900 dark:focus:bg-navy-900"
+                        placeholder="Filled input"
+                        type="text" />
+                    </div>
+
+                    <!-- Valid Input -->
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Valid Input</label>
+                      <div class="flex flex-col gap-1">
+                        <input
+                          class="form-input w-full rounded-lg border border-success bg-transparent px-3 py-2 placeholder:text-slate-400/70"
+                          placeholder="Username"
+                          type="text"
+                          value="Valid input" />
+                        <span class="text-xs text-success">Input is valid</span>
+                      </div>
+                    </div>
+
+                    <!-- Invalid Input -->
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Invalid Input</label>
+                      <div class="flex flex-col gap-1">
+                        <input
+                          class="form-input w-full rounded-lg border border-error bg-transparent px-3 py-2 placeholder:text-slate-400/70"
+                          placeholder="Username"
+                          type="text"
+                          value="Invalid input" />
+                        <span class="text-xs text-danger">Input is invalid</span>
+                      </div>
+                    </div>
+
+                    <!-- Readonly Input -->
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Readonly Input</label>
+                      <input
+                        type="text"
+                        value="Readonly input"
+                        readonly
+                        class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 bg-gray-100 dark:bg-gray-700" />
+                    </div>
+
+                    <!-- Disabled Input -->
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Disabled Input</label>
+                      <input
+                        type="text"
+                        value="Disabled input"
+                        disabled
+                        class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 bg-gray-200 text-gray-500 dark:bg-gray-700 cursor-not-allowed" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Checkbox & Radio -->
+              <div class="flex flex-col md:flex-row gap-2">
+                <div class="card-content w-full md:w-1/2">
+                  <div class="card-header">
+                    <h1 class="text-lg font-semibold text-gray-800 dark:text-white">
+                      Input
+                      <span class="text-base font-normal text-gray-500 dark:text-gray-400">Checkbox</span>
+                    </h1>
+                  </div>
+                  <div class="card-body">
+                    <!-- Basic Checkbox -->
+                    <div class="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0 mt-2">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" class="h-4 w-4 sm:h-5 sm:w-5 text-primary border-gray-300 rounded focus:ring focus:ring-indigo-200" />
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12" />
+                          </svg>
+                        </span>
+                        Default
+                      </label>
+                    </div>
+
+                    <!-- Colored Checkboxes -->
+                    <div class="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0 mt-2">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" class="h-4 w-4 sm:h-5 sm:w-5 text-primary border-gray-300 rounded focus:ring focus:ring-blue-200" />
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12" />
+                          </svg>
+                        </span>
+                        Blue
+                      </label>
+
+                      <label class="custom-checkbox">
+                        <input type="checkbox" class="h-4 w-4 sm:h-5 sm:w-5 text-success border-gray-300 rounded focus:ring focus:ring-green-200" />
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12" />
+                          </svg>
+                        </span>
+                        Green
+                      </label>
+
+                      <label class="custom-checkbox">
+                        <input type="checkbox" class="h-4 w-4 sm:h-5 sm:w-5 text-danger border-gray-300 rounded focus:ring focus:ring-red-200" />
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12" />
+                          </svg>
+                        </span>
+                        Red
+                      </label>
+                    </div>
+
+                    <!-- Disabled Checkbox -->
+                    <div class="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0 mt-2">
+                      <label class="custom-checkbox opacity-50 cursor-not-allowed">
+                        <input type="checkbox" disabled class="h-4 w-4 sm:h-5 sm:w-5 text-gray-400 border-gray-300 rounded focus:ring focus:ring-gray-200" />
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12" />
+                          </svg>
+                        </span>
+                        Disabled
+                      </label>
+                    </div>
+
+                    <!-- Checkbox with Options Array -->
+                    <div class="mt-6">
+                      <h3 class="font-medium text-gray-700 dark:text-gray-300 mb-3">Checkbox with Options Array</h3>
+                      <div id="checkboxOptions" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <!-- Options will be inserted here by JavaScript -->
+                      </div>
+                      <!-- Selected Values Display -->
+                      <div class="mt-4 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                        <h4 class="font-medium text-gray-700 dark:text-gray-300 mb-2">Selected Values:</h4>
+                        <div id="selectedValues" class="text-sm text-gray-600 dark:text-gray-400">No options selected</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-content w-full md:w-1/2">
+                  <div class="card-header">
+                    <h1 class="text-lg font-semibold text-gray-800 dark:text-white">
+                      Input
+                      <span class="text-base font-normal text-gray-500 dark:text-gray-400">Radio</span>
+                    </h1>
+                  </div>
+                  <div class="card-body">
+                    <!-- Default Radio -->
+                    <label class="inline-flex items-center">
+                      <input type="radio" name="gender" class="form-radio text-blue-600" />
+                      <span class="ml-2">Default</span>
+                    </label>
+
+                    <!-- Colored Radio Buttons -->
+                    <div class="flex flex-col gap-2">
+                      <label class="inline-flex items-center">
+                        <input type="radio" name="color" class="form-radio text-green-600" />
+                        <span class="ml-2">Green</span>
+                      </label>
+                      <label class="inline-flex items-center">
+                        <input type="radio" name="color" class="form-radio text-red-600" />
+                        <span class="ml-2">Red</span>
+                      </label>
+                      <label class="inline-flex items-center">
+                        <input type="radio" name="color" class="form-radio text-purple-600" />
+                        <span class="ml-2">Purple</span>
+                      </label>
+                    </div>
+                    <!-- Radio Selection -->
+                    <div class="mb-3">
+                      <p class="text-gray-600 dark:text-gray-400">Radio Selection:</p>
+                      <div id="radioSelection" class="font-mono text-sm mt-1">[]</div>
+                    </div>
+
+                    <!-- Disabled Radio -->
+                    <label class="inline-flex items-center opacity-50 cursor-not-allowed">
+                      <input type="radio" disabled class="form-radio text-gray-400" />
+                      <span class="ml-2">Disabled</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!--  Switch  -->
+              <div class="flex flex-col md:flex-row gap-2">
+                <div class="card-content w-full md:w-1/2">
+                  <div class="card-header">
+                    <h1 class="text-lg font-semibold text-gray-800 dark:text-white">
+                      Input
+                      <span class="text-base font-normal text-gray-500 dark:text-gray-400">Editor</span>
+                    </h1>
+                  </div>
+                  <div class="card-body">
+                    <div id="editor">
+                      <p>Hello World!</p>
+                      <p>
+                        Some initial
+                        <strong>bold</strong>
+                        text
+                      </p>
+                      <p><br /></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-content w-full md:w-1/2">
+                  <div class="card-header">
+                    <h1 class="text-lg font-semibold text-gray-800 dark:text-white">
+                      Input
+                      <span class="text-base font-normal text-gray-500 dark:text-gray-400">Switch</span>
+                    </h1>
+                  </div>
+                  <div class="card-body">
+                    <!-- Basic Switch -->
+                    <div class="flex items-center mt-5">
+                      <label class="inline-flex items-center cursor-pointer relative">
+                        <input type="checkbox" class="sr-only peer" />
+                        <div class="w-10 h-5 bg-slate-300 rounded-full peer-checked:bg-blue-600 transition-colors duration-200"></div>
+                        <div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition-transform duration-200 transform peer-checked:translate-x-[9.5px] shadow-sm"></div>
+                        <span class="ml-3 text-gray-700 dark:text-white">Basic Switch</span>
+                      </label>
+                    </div>
+
+                    <!-- Colored Switches -->
+                    <div class="flex flex-col gap-4 mt-4">
+                      <label class="inline-flex items-center cursor-pointer relative">
+                        <input type="checkbox" class="sr-only peer" />
+                        <div class="w-10 h-5 bg-slate-300 rounded-full peer-checked:bg-green-600 transition-colors duration-200"></div>
+                        <div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition-transform duration-200 transform peer-checked:translate-x-[9.5px] shadow-sm"></div>
+                        <span class="ml-3 text-gray-700 dark:text-white">Green Switch</span>
+                      </label>
+
+                      <label class="inline-flex items-center cursor-pointer relative">
+                        <input type="checkbox" class="sr-only peer" />
+                        <div class="w-10 h-5 bg-slate-300 rounded-full peer-checked:bg-red-600 transition-colors duration-200"></div>
+                        <div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition-transform duration-200 transform peer-checked:translate-x-[9.5px] shadow-sm"></div>
+                        <span class="ml-3 text-gray-700 dark:text-white">Red Switch</span>
+                      </label>
+
+                      <label class="inline-flex items-center cursor-pointer relative">
+                        <input type="checkbox" class="sr-only peer" />
+                        <div class="w-10 h-5 bg-slate-300 rounded-full peer-checked:bg-yellow-600 transition-colors duration-200"></div>
+                        <div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition-transform duration-200 transform peer-checked:translate-x-[9.5px] shadow-sm"></div>
+                        <span class="ml-3 text-gray-700 dark:text-white">Yellow Switch</span>
+                      </label>
+                    </div>
+
+                    <!-- Switch Selections -->
+                    <div>
+                      <p class="text-gray-600 dark:text-gray-400">Switch Selections:</p>
+                      <div id="switchSelections" class="font-mono mt-1">[]</div>
+                    </div>
+
+                    <!-- Sizes -->
+                    <div class="flex flex-col gap-4 mt-4">
+                      <label class="inline-flex items-center cursor-pointer relative">
+                        <input type="checkbox" class="sr-only peer" />
+                        <div class="w-8 h-4 bg-slate-300 rounded-full peer-checked:bg-blue-600 transition-colors duration-200"></div>
+                        <div class="absolute left-0.5 top-0.6 w-3 h-3 bg-white rounded-full transition-transform duration-200 transform peer-checked:translate-x-[7.5px] shadow-sm"></div>
+                        <span class="ml-3 text-gray-700 dark:text-white">Small Switch</span>
+                      </label>
+
+                      <label class="inline-flex items-center cursor-pointer relative">
+                        <input type="checkbox" class="sr-only peer" />
+                        <div class="w-12 h-6 bg-slate-300 rounded-full peer-checked:bg-blue-600 transition-colors duration-200"></div>
+                        <div class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full transition-transform duration-200 transform peer-checked:translate-x-[11.5px] shadow-sm"></div>
+                        <span class="ml-3 text-gray-700 dark:text-white">Large Switch</span>
+                      </label>
+                    </div>
+
+                    <!-- Disabled State -->
+                    <div class="flex flex-col gap-4 mt-4">
+                      <label class="inline-flex items-center cursor-not-allowed relative opacity-50">
+                        <input type="checkbox" class="sr-only peer" disabled />
+                        <div class="w-10 h-5 bg-slate-300 rounded-full"></div>
+                        <div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full shadow-sm"></div>
+                        <span class="ml-3 text-gray-700 dark:text-white">Disabled Switch</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5. Textarea & Upload -->
+              <div class="flex flex-col md:flex-row gap-2">
+                <div class="card-content w-full md:w-1/2">
+                  <div class="card-header">
+                    <h1 class="text-lg font-semibold text-gray-800 dark:text-white">
+                      Input
+                      <span class="text-base font-normal text-gray-500 dark:text-gray-400">Textarea</span>
+                    </h1>
+                  </div>
+                  <div class="card-body">
+                    <textarea
+                      rows="4"
+                      class="px-4 py-2 border border-gray-300 rounded-lg shadow-sm card dark:text-gray-100 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full transition-all duration-300"
+                      placeholder="Type your message..."></textarea>
+                  </div>
+                </div>
+                <div class="card-content w-full md:w-1/2">
+                  <div class="card-header">
+                    <h1 class="text-lg font-semibold text-gray-800 dark:text-white">
+                      Input
+                      <span class="text-base font-normal text-gray-500 dark:text-gray-400">Upload</span>
+                    </h1>
+                  </div>
+                  <div class="card-body">
+                    <!-- File Upload -->
+                    <div class="flex flex-col gap-1.5">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">File Upload</label>
+                      <div class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-4 text-center">
+                        <input type="file" class="hidden" id="file-upload" multiple />
+                        <label for="file-upload" class="cursor-pointer">
+                          <div class="flex flex-col items-center">
+                            <i class="mdi mdi-cloud-upload text-3xl text-gray-400"></i>
+                            <span class="mt-2 text-gray-500">Drag and drop files here or click to upload</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Baris 1: 2 Kolom -->
+              <div class="flex flex-col md:flex-row gap-2">
+                <!-- Kolom 1 -->
+                <div class="card-content w-full md:w-1/2">
+                  <div class="card-header">
+                    <h1 class="text-lg font-semibold text-gray-800 dark:text-white">
+                      Input
+                      <span class="text-base font-normal text-gray-500 dark:text-gray-400">Select</span>
+                    </h1>
+                  </div>
+                  <div class="card-body">
+                    <!-- Select -->
+                    <div class="flex flex-col gap-1.5">
+                      <div>
+                        <div class="my-2 grid grid-cols-1">
+                          <select
+                            id="religion"
+                            name="religion"
+                            autocomplete="religion-name"
+                            class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-transparent dark:text-gray-100 py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                            <option value="">Select dropdown</option>
+                            <option value="information">Information</option>
+                            <option value="success">Success</option>
+                            <option value="warning">Warning</option>
+                            <option value="settings">Settings</option>
+                            <option value="other">Other</option>
+                          </select>
+                          <svg
+                            class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+                            viewBox="0 0 16 16"
+                            fill="currentColor"
+                            aria-hidden="true"
+                            data-slot="icon">
+                            <path
+                              fill-rule="evenodd"
+                              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Kolom 2 -->
+                <div class="card-content w-full md:w-1/2">
+                  <div class="card-header">
+                    <h1 class="text-lg font-semibold text-gray-800 dark:text-white">
+                      Input
+                      <span class="text-base font-normal text-gray-500 dark:text-gray-400">Range Slider</span>
+                    </h1>
+                  </div>
+                  <div class="card-body">
+                    <!-- Primary Range Slider -->
+                    <div class="flex flex-col gap-2">
+                      <div class="flex justify-between items-center">
+                        <label class="font-medium text-gray-700 dark:text-gray-300">Primary Range</label>
+                        <span class="font-medium text-primary" id="primaryValue">50%</span>
+                      </div>
+                      <div class="relative">
+                        <input
+                          type="range"
+                          id="primaryRange"
+                          class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-primary [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:border-0"
+                          min="0"
+                          max="100"
+                          value="50" />
+                        <div class="flex justify-between text-xs text-gray-500 mt-1">
+                          <span>0%</span>
+                          <span>50%</span>
+                          <span>100%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Success Range Slider -->
+                    <div class="flex flex-col gap-2">
+                      <div class="flex justify-between items-center">
+                        <label class="font-medium text-gray-700 dark:text-gray-300">Success Range</label>
+                        <span class="font-medium text-success" id="successValue">75%</span>
+                      </div>
+                      <div class="relative">
+                        <input
+                          type="range"
+                          id="successRange"
+                          class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-success [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-success [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:border-0"
+                          min="0"
+                          max="100"
+                          value="75" />
+                        <div class="flex justify-between text-xs text-gray-500 mt-1">
+                          <span>0%</span>
+                          <span>75%</span>
+                          <span>100%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Warning Range Slider -->
+                    <div class="flex flex-col gap-2">
+                      <div class="flex justify-between items-center">
+                        <label class="font-medium text-gray-700 dark:text-gray-300">Warning Range</label>
+                        <span class="font-medium text-warning" id="warningValue">25%</span>
+                      </div>
+                      <div class="relative">
+                        <input
+                          type="range"
+                          id="warningRange"
+                          class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-warning [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-warning [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:border-0"
+                          min="0"
+                          max="100"
+                          value="25" />
+                        <div class="flex justify-between text-xs text-gray-500 mt-1">
+                          <span>0%</span>
+                          <span>25%</span>
+                          <span>100%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Disabled Range -->
+                    <div class="flex flex-col gap-2">
+                      <div class="flex justify-between items-center">
+                        <label class="font-medium text-gray-700 dark:text-gray-300">Disabled Range</label>
+                        <span class="font-medium text-gray-400">30%</span>
+                      </div>
+                      <div class="relative">
+                        <input
+                          type="range"
+                          class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-not-allowed opacity-50 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gray-400 [&::-webkit-slider-thumb]:cursor-not-allowed [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gray-400 [&::-moz-range-thumb]:cursor-not-allowed [&::-moz-range-thumb]:border-0"
+                          min="0"
+                          max="100"
+                          value="30"
+                          disabled />
+                        <div class="flex justify-between text-xs text-gray-500 mt-1">
+                          <span>0%</span>
+                          <span>30%</span>
+                          <span>100%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 7. Input Validation & Formatting -->
+              <div class="flex flex-col gap-2">
+                <div class="card-content w-full">
+                  <div class="card-header">
+                    <h1 class="text-lg font-semibold text-gray-800 dark:text-white">
+                      Input
+                      <span class="text-base font-normal text-gray-500 dark:text-gray-400">Validation & Formatting</span>
+                    </h1>
+                  </div>
+                  <div class="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Sizing Options -->
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Sizing Options</label>
+                      <div class="flex flex-col gap-2">
+                        <input type="text" placeholder="Small" class="form-input h-8 text-sm rounded-lg border border-gray-300 bg-transparent px-3 py-1.5" />
+                        <input type="text" placeholder="Default" class="form-input h-10 text-base rounded-lg border border-gray-300 bg-transparent px-4 py-2" />
+                        <input type="text" placeholder="Large" class="form-input h-12 text-lg rounded-lg border border-gray-300 bg-transparent px-4 py-2.5" />
+                      </div>
+                    </div>
+
+                    <!-- Validation States -->
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Validation States</label>
+                      <div class="flex flex-col gap-2">
+                        <div class="relative">
+                          <input type="text" placeholder="Valid Input" class="form-input w-full rounded-lg border border-green-500 bg-transparent px-4 py-2 text-green-600" value="Valid Input" />
+                          <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                            <svg class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                              <path
+                                fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="relative">
+                          <input type="text" placeholder="Invalid Input" class="form-input w-full rounded-lg border border-red-500 bg-transparent px-4 py-2 text-red-600" value="Invalid Input" />
+                          <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                            <svg class="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                              <path
+                                fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Input testing -->
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Input testing</label>
+                      <div class="relative">
+                        <input type="text" placeholder="Enter email" class="form-input w-full rounded-lg border border-gray-300 bg-transparent px-4 py-2" />
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                          <svg class="h-5 w-5 text-gray-400 cursor-help" viewBox="0 0 20 20" fill="currentColor" data-tooltip-target="email-tooltip">
+                            <path
+                              fill-rule="evenodd"
+                              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </div>
+                        <div
+                          id="email-tooltip"
+                          role="tooltip"
+                          class="invisible absolute z-10 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                          Please enter a valid email address
+                          <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <input
+                          id="emailInput"
+                          class="form-input w-full rounded-lg border border-gray-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 focus:outline-none focus:ring-0 transition-colors duration-200"
+                          placeholder="Enter email"
+                          type="email" />
+                        <span id="validMessage" class="text-xs text-green-600 hidden">Valid email address</span>
+                        <span id="invalidMessage" class="text-xs text-red-600 hidden">Invalid email address</span>
+                      </div>
+                    </div>
+
+                    <!-- Input Masking -->
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Credit Card</label>
+                      <input
+                        type="text"
+                        placeholder="1234 5678 9012 3456"
+                        class="form-input w-full rounded-lg border border-gray-300 bg-transparent px-4 py-2 focus:outline-none focus:ring-0 transition-colors duration-200"
+                        data-mask="0000 0000 0000 0000" />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Phone Number</label>
+                      <div class="relative">
+                        <select class="absolute left-0 top-0 h-full dark:text-gray-100 dark:bg-transparent rounded-l-lg border-r border-gray-300 bg-gray-50 px-0.5 text-sm">
+                          <option>+62</option>
+                          <option>+1</option>
+                          <option>+44</option>
+                        </select>
+                        <input
+                          type="text"
+                          placeholder="812-3456-7890"
+                          class="form-input w-full rounded-lg border border-gray-300 bg-transparent pl-16 pr-4 py-2 focus:outline-none focus:ring-0 transition-colors duration-200"
+                          data-mask="000-0000-0000" />
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Date</label>
+                      <input
+                        type="text"
+                        placeholder="DD/MM/YYYY"
+                        class="form-input w-full rounded-lg border border-gray-300 bg-transparent px-4 py-2 focus:outline-none focus:ring-0 transition-colors duration-200"
+                        data-mask="00/00/0000" />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Time</label>
+                      <input
+                        type="text"
+                        placeholder="HH:MM"
+                        class="form-input w-full rounded-lg border border-gray-300 bg-transparent px-4 py-2 focus:outline-none focus:ring-0 transition-colors duration-200"
+                        data-mask="00:00" />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Numeral Formatting</label>
+                      <input
+                        type="text"
+                        placeholder="1,234.56"
+                        class="form-input w-full rounded-lg border border-gray-300 bg-transparent px-4 py-2 focus:outline-none focus:ring-0 transition-colors duration-200"
+                        data-mask="000,000.00" />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Blocks</label>
+                      <input
+                        type="text"
+                        placeholder="ABCD-1234-WXYZ"
+                        class="form-input w-full rounded-lg border border-gray-300 bg-transparent px-4 py-2 focus:outline-none focus:ring-0 transition-colors duration-200"
+                        data-mask="AAAA-AAAA-AAAA" />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Delimiters</label>
+                      <input
+                        type="text"
+                        placeholder="AB.12.CD"
+                        class="form-input w-full rounded-lg border border-gray-300 bg-transparent px-4 py-2 focus:outline-none focus:ring-0 transition-colors duration-200"
+                        data-mask="AA.AA.AA" />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Custom Delimiters</label>
+                      <input
+                        type="text"
+                        placeholder="AB*12*CD"
+                        class="form-input w-full rounded-lg border border-gray-300 bg-transparent px-4 py-2 focus:outline-none focus:ring-0 transition-colors duration-200"
+                        data-mask="AA*AA*AA" />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <label class="font-medium text-gray-700 dark:text-gray-300">Prefix</label>
+                      <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">$</span>
+                        <input
+                          type="text"
+                          placeholder="0.00"
+                          class="form-input w-full rounded-lg border border-gray-300 bg-transparent pl-7 pr-4 py-2 focus:outline-none focus:ring-0 transition-colors duration-200"
+                          data-mask="000.00" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="footer-inner">
+            <p class="footer-text">
+              © 2025 hiraway. Designed with ❤️ by
+              <a href="https://github.com/Arisdolanan" target="_blank" class="text-blue-500">Me (vibe coding)</a>
+              x AI All rights reserved
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="../assets/js/hiraway.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masky-js/dist/masky.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.11.0/validator.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Email validation
+        const emailInput = document.getElementById('emailInput')
+        const validMessage = document.getElementById('validMessage')
+        const invalidMessage = document.getElementById('invalidMessage')
+
+        if (emailInput) {
+          emailInput.addEventListener('input', function () {
+            const value = this.value
+
+            // Reset classes
+            emailInput.classList.remove('border-red-500', 'border-green-500')
+            validMessage.classList.add('hidden')
+            invalidMessage.classList.add('hidden')
+
+            if (value) {
+              if (validator.isEmail(value)) {
+                emailInput.classList.add('border-green-500')
+                validMessage.classList.remove('hidden')
+              } else {
+                emailInput.classList.add('border-red-500')
+                invalidMessage.classList.remove('hidden')
+              }
+            }
+          })
+        }
+
+        // Initialize Input Masks
+        const masks = {
+          'credit-card': {
+            mask: '0000 0000 0000 0000',
+            validate: (value) => /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/.test(value),
+          },
+          phone: {
+            mask: '000-0000-0000',
+            validate: (value) => /^\d{3}-\d{4}-\d{4}$/.test(value),
+          },
+          date: {
+            mask: '00/00/0000',
+            validate: (value) => {
+              const [day, month, year] = value.split('/')
+              const date = new Date(year, month - 1, day)
+              return date && date.getMonth() + 1 === parseInt(month)
+            },
+          },
+          time: {
+            mask: '00:00',
+            validate: (value) => {
+              const [hours, minutes] = value.split(':')
+              return parseInt(hours) < 24 && parseInt(minutes) < 60
+            },
+          },
+          numeral: {
+            mask: '000,000.00',
+            validate: (value) => /^\d{1,3}(,\d{3})*\.\d{2}$/.test(value),
+          },
+          prefix: {
+            mask: '000.00',
+            validate: (value) => /^\d+\.\d{2}$/.test(value),
+          },
+        }
+
+        // Apply masks to inputs
+        Object.entries(masks).forEach(([key, config]) => {
+          const inputs = document.querySelectorAll(`[data-mask="${key}"]`)
+          inputs.forEach((input) => {
+            // Initialize masky
+            const masky = new Masky(input, {
+              mask: config.mask,
+              transform: config.transform,
+              onChange: (value) => {
+                const isValid = config.validate ? config.validate(value) : true
+
+                // Update input styling
+                input.classList.remove('border-green-500', 'border-red-500')
+
+                if (value) {
+                  if (isValid) {
+                    input.classList.add('border-green-500')
+                  } else {
+                    input.classList.add('border-red-500')
+                  }
+                }
+              },
+            })
+          })
+        })
+      })
+    </script>
+    <script>
+      // Function to update range value display
+      function updateRangeValue(rangeId, valueId) {
+        const range = document.getElementById(rangeId)
+        const value = document.getElementById(valueId)
+
+        if (range && value) {
+          range.addEventListener('input', function () {
+            value.textContent = this.value + '%'
+          })
+        }
+      }
+
+      // Function to update radio selection
+      function updateRadioSelection() {
+        const selectedRadio = document.querySelector('input[name="color"]:checked')
+        const radioSelection = document.getElementById('radioSelection')
+
+        if (selectedRadio) {
+          const color = selectedRadio.nextElementSibling.textContent
+          radioSelection.innerHTML = `<div class="font-mono text-sm">["${color}"]</div>`
+        } else {
+          radioSelection.innerHTML = '<div class="font-mono text-sm">[]</div>'
+        }
+      }
+
+      // Function to update switch selections
+      function updateSwitchSelections() {
+        // Get all colored switches
+        const coloredSwitches = document.querySelectorAll('.flex.flex-col.gap-4.mt-4 label')
+        const switchSelections = document.getElementById('switchSelections')
+        const selectedSwitches = []
+
+        coloredSwitches.forEach((switchLabel) => {
+          const checkbox = switchLabel.querySelector('input[type="checkbox"]')
+          const labelText = switchLabel.querySelector('span:last-child').textContent
+
+          if (checkbox && checkbox.checked) {
+            selectedSwitches.push(labelText)
+          }
+        })
+
+        if (selectedSwitches.length > 0) {
+          switchSelections.innerHTML = `<div class="font-mono text-sm">[${selectedSwitches.map((sw) => `"${sw}"`).join(', ')}]</div>`
+        } else {
+          switchSelections.innerHTML = '<div class="font-mono text-sm">[]</div>'
+        }
+      }
+
+      // Initialize all range sliders and add event listeners
+      document.addEventListener('DOMContentLoaded', function () {
+        updateRangeValue('primaryRange', 'primaryValue')
+        updateRangeValue('successRange', 'successValue')
+        updateRangeValue('warningRange', 'warningValue')
+
+        // Add event listeners to all radio buttons
+        document.querySelectorAll('input[name="color"]').forEach((radio) => {
+          radio.addEventListener('change', updateRadioSelection)
+        })
+
+        // Add event listeners to colored switches
+        document.querySelectorAll('.flex.flex-col.gap-4.mt-4 input[type="checkbox"]').forEach((switchInput) => {
+          switchInput.addEventListener('change', updateSwitchSelections)
+        })
+
+        // Initial update
+        updateRadioSelection()
+        updateSwitchSelections()
+      })
+
+      // Quill Editor
+      const quill = new Quill('#editor', {
+        theme: 'snow',
+      })
+    </script>
+
+    <!-- Add this script before the closing body tag -->
+    <script>
+      // Checkbox options array
+      const checkboxOptions = [
+        { id: 'option1', label: 'Option 1', color: 'primary', checked: true },
+        { id: 'option2', label: 'Option 2', color: 'success', checked: false },
+        { id: 'option3', label: 'Option 3', color: 'warning', checked: false },
+        { id: 'option4', label: 'Option 4', color: 'danger', checked: false },
+        { id: 'option5', label: 'Option 5', color: 'primary', checked: false },
+        { id: 'option6', label: 'Option 6', color: 'success', checked: false },
+      ]
+
+      // Function to create checkbox HTML
+      function createCheckbox(option) {
+        return `
+                          <label class="custom-checkbox">
+                            <input 
+                              type="checkbox" 
+                              id="${option.id}"
+                              class="h-4 w-4 sm:h-5 sm:w-5 text-${option.color} border-gray-300 rounded focus:ring focus:ring-${option.color}/20"
+                              ${option.checked ? 'checked' : ''}
+                              data-label="${option.label}"
+                            />
+                            <span>
+                              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                              </svg>
+                            </span>
+                            ${option.label}
+                          </label>
+                        `
+      }
+
+      // Function to update selected values display
+      function updateSelectedValues() {
+        const selectedCheckboxes = document.querySelectorAll('#checkboxOptions input[type="checkbox"]:checked')
+        const selectedValues = Array.from(selectedCheckboxes).map((checkbox) => checkbox.dataset.label)
+        const displayElement = document.getElementById('selectedValues')
+
+        if (selectedValues.length > 0) {
+          displayElement.innerHTML = `
+                            <div class="font-mono text-sm">
+                              [${selectedValues.map((value) => `"${value}"`).join(', ')}]
+                            </div>
+                          `
+        } else {
+          displayElement.textContent = '[]'
+        }
+      }
+
+      // Function to render checkboxes
+      function renderCheckboxes() {
+        const container = document.getElementById('checkboxOptions')
+        if (container) {
+          container.innerHTML = checkboxOptions.map((option) => createCheckbox(option)).join('')
+
+          // Add event listeners to all checkboxes
+          container.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+            checkbox.addEventListener('change', updateSelectedValues)
+          })
+
+          // Initial update of selected values
+          updateSelectedValues()
+        }
+      }
+
+      // Initialize checkboxes when DOM is loaded
+      document.addEventListener('DOMContentLoaded', renderCheckboxes)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hiraway - Clean. Minimal. Powerful Admin Template</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link href="../assets/styles/hiraway.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Loading indicator -->
+    <div id="page-loader">
+      <div class="loader"></div>
+    </div>
+    <div class="layout-base">
+      <aside id="sidebar" class="sidebar-base sidebar-default">
+        <div class="sidebar-inner">
+          <div class="sidebar-header">
+            <div class="sidebar-logo">
+              <span class="sidebar-label">hiraway</span>
+            </div>
+            <button
+              id="sidebarToggle"
+              aria-label="Toggle sidebar"
+              class="sidebar-toggle absolute top-4 right-4 flex items-center justify-center w-10 h-10 transition text-gray-800 dark:text-gray-100 focus:outline-none rounded-lg">
+              <svg id="sidebarOpenIcon" class="block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 3.5v17M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6z" />
+              </svg>
+              <svg id="sidebarClosedIcon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M9.367 2.25h5.266c1.092 0 1.958 0 2.655.057c.714.058 1.317.18 1.869.46a4.75 4.75 0 0 1 2.075 2.077c.281.55.403 1.154.461 1.868c.057.697.057 1.563.057 2.655v5.266c0 1.092 0 1.958-.057 2.655c-.058.714-.18 1.317-.46 1.869a4.75 4.75 0 0 1-2.076 2.075c-.552.281-1.155.403-1.869.461c-.697.057-1.563.057-2.655.057H9.367c-1.092 0-1.958 0-2.655-.057c-.714-.058-1.317-.18-1.868-.46a4.75 4.75 0 0 1-2.076-2.076c-.281-.552-.403-1.155-.461-1.869c-.057-.697-.057-1.563-.057-2.655V9.367c0-1.092 0-1.958.057-2.655c.058-.714.18-1.317.46-1.868a4.75 4.75 0 0 1 2.077-2.076c.55-.281 1.154-.403 1.868-.461c.697-.057 1.563-.057 2.655-.057M6.834 3.802c-.62.05-1.005.147-1.31.302a3.25 3.25 0 0 0-1.42 1.42c-.155.305-.251.69-.302 1.31c-.051.63-.052 1.434-.052 2.566v5.2c0 1.133 0 1.937.052 2.566c.05.62.147 1.005.302 1.31a3.25 3.25 0 0 0 1.42 1.42c.305.155.69.251 1.31.302c.392.032.851.044 1.416.05V3.752c-.565.005-1.024.017-1.416.049" />
+              </svg>
+            </button>
+          </div>
+          <nav class="nav-menu">
+            <div class="group">
+              <div class="group-title">
+                <span class="group-title-text sb-label sidebar-label">Dashboard</span>
+              </div>
+              <div class="group-content">
+                <a class="nav-link" href="../index.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6m7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58z" />
+                  </svg>
+                  <span class="sb-label sidebar-label">HealthCare</span>
+                </a>
+                <a class="nav-link" href="../dashboard/education.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09v6h2V9zM17 15.99l-5 2.73l-5-2.73v-3.72L12 15l5-2.73z" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    Education
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+                <a class="nav-link" href="../dashboard/analytics.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M3 17h3v-7H3v7zm5 0h3V7H8v10zm5 0h3v-4h-3v4zm5 0h3V4h-3v13z" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    Analytics
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+
+                <a class="nav-link" href="../dashboard/cryptocurrency.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M17.06 11.57C17.65 10.88 18 9.98 18 9c0-1.86-1.27-3.43-3-3.87V3h-2v2h-2V3H9v2H6v2h2v10H6v2h3v2h2v-2h2v2h2v-2c2.21 0 4-1.79 4-4c0-1.45-.78-2.73-1.94-3.43M10 7h4c1.1 0 2 .9 2 2s-.9 2-2 2h-4V7m5 10h-5v-4h5c1.1 0 2 .9 2 2s-.9 2-2 2" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    Cryptocurrency
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+                <a class="nav-link" href="../dashboard/crm.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M16 4c0-1.11.89-2 2-2s2 .89 2 2s-.89 2-2 2s-2-.89-2-2m4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H17c-.8 0-1.54.37-2.01 1l-3.7 3.7c-.28.28-.44.66-.44 1.06V20h-2v-6c0-.4.16-.78.44-1.06L14.99 9c.47-.63 1.21-1 2.01-1h1.54c.8 0 1.54.37 2.01 1L22.5 16H20v6h-2m-8-2v-6h2v6h-2m-4 0v-6h2v6H8m-4 0v-6h2v6H4" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    CRM
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+                <a class="nav-link" href="../dashboard/pos-system.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2m0 14H4v-6h16v6m0-10H4V6h16v2" />
+                  </svg>
+                  <span class="sb-label sidebar-label">
+                    POS System
+                    <span class="sb-badge">Soon</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="group">
+              <div class="group-title">
+                <span class="group-title-text sb-label sidebar-label">UI Components</span>
+              </div>
+              <div class="group-content">
+                <div class="sb-dropdown">
+                  <button id="dropdownComponentBtn" type="button" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15L6.04 7.5L12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z" />
+                      </svg>
+                      <span class="sb-label sidebar-label">Component</span>
+                    </span>
+                    <svg id="dropdownComponentIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownComponentMenu" class="sb-menu hidden">
+                    <a href="../components/typography.html" class="sb-item">Typography</a>
+                    <a href="../colors.html" class="sb-item">Colors</a>
+                    <a href="../alert.html" class="sb-item">Alert</a>
+                    <a href="../button.html" class="sb-item">Button</a>
+                    <a href="../card.html" class="sb-item">Card</a>
+                    <a href="../carousel.html" class="sb-item">Carousel</a>
+                    <a href="../dropdown.html" class="sb-item">Dropdown</a>
+                    <a href="../image.html" class="sb-item">Image</a>
+                    <a href="../modal.html" class="sb-item">Modal</a>
+                    <a href="../progress-bar.html" class="sb-item">Progress bar</a>
+                    <a href="../skeleton.html" class="sb-item">Skeleton</a>
+                    <a href="../tab-accordion.html" class="sb-item">Tab & Accordion</a>
+                    <a href="../badges.html" class="sb-item">Badges</a>
+                    <a href="../paginations.html" class="sb-item">Paginations</a>
+                    <a href="../video.html" class="sb-item">Video</a>
+                    <a href="../input.html" class="sb-item">Input</a>
+                  </div>
+                </div>
+                <div class="sb-dropdown">
+                  <button id="dropdownFormBtn" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true"
+                        role="img"
+                        class="iconify iconify--mdi"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M15 5h3l-1.5 2zM5 2h14a2 2 0 0 1 2 2v16c0 1.11-.89 2-2 2H5a2 2 0 0 1-2 2V4c0-1.1.9-2 2-2m0 2v4h14V4zm0 16h14V10H5zm2-8h10v2H7zm0 4h10v2H7z"></path>
+                      </svg>
+                      <span class="sb-label sidebar-label">Form</span>
+                    </span>
+                    <svg id="dropdownFormIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownFormMenu" class="sb-menu hidden">
+                    <a href="../forms/simple-form.html" class="sb-item">Simple Form</a>
+                    <a href="../forms/expert-form.html" class="sb-item">Expert Form</a>
+                  </div>
+                </div>
+                <div class="sb-dropdown">
+                  <button id="dropdownChartBtn" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true"
+                        role="img"
+                        class="iconify iconify--mdi"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M17.45 15.18L22 7.31V21H2V3h2v12.54L9.5 6L16 9.78l4.24-7.33l1.73 1l-5.23 9.05l-6.51-3.75L4.31 19h2.26l4.39-7.56z"></path>
+                      </svg>
+                      <span class="sb-label sidebar-label">Chart</span>
+                    </span>
+                    <svg id="dropdownChartIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownChartMenu" class="sb-menu hidden">
+                    <a href="../charts/apex.html" class="sb-item">Apex chart</a>
+                    <a href="../charts/chartsjs.html" class="sb-item">Chart js</a>
+                  </div>
+                </div>
+                <div class="sb-dropdown">
+                  <button id="dropdownTableBtn" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true"
+                        role="img"
+                        class="iconify iconify--mdi"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m0 4v4h6V8zm8 0v4h6V8zm-8 6v4h6v-4zm8 0v4h6v-4z"></path>
+                      </svg>
+                      <span class="sb-label sidebar-label">Table</span>
+                    </span>
+                    <svg id="dropdownTableIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownTableMenu" class="sb-menu hidden">
+                    <a href="basic-table.html" class="sb-item">Basic Table</a>
+                    <a href="ag-grid-table.html" class="sb-item">Ag Grid Table</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group">
+              <div class="group-title">
+                <span class="group-title-text sb-label sidebar-label">Apps</span>
+              </div>
+              <div class="group-content">
+                <a class="nav-link" href="../pages/settings.html" data-discover="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4z" />
+                  </svg>
+                  <span class="sb-label sidebar-label">User Profile</span>
+                </a>
+                <div class="sb-dropdown">
+                  <button id="dropdownAppsBtn" type="button" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4V4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z" />
+                      </svg>
+                      <span class="sb-label sidebar-label">Apps</span>
+                      <span class="sb-badge">Soon</span>
+                    </span>
+                    <svg id="dropdownAppsIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownAppsMenu" class="sb-menu">
+                    <div class="relative">
+                      <button id="dropdownHealthcareBtn" type="button" class="sb-btn">
+                        <span class="flex items-center gap-3">
+                          <span class="flex-1 text-left sidebar-label">Healthcare</span>
+                        </span>
+                        <svg id="dropdownHealthcareIcon" class="sb-icon-chevron" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                        </svg>
+                      </button>
+                      <div id="dropdownHealthcareMenu" class="pl-4 mt-1 space-y-1 hidden">
+                        <a href="../apps/healthcare/patients.html" class="sb-item">Patients</a>
+                        <a href="../apps/healthcare/patient-details.html" class="sb-item">Patients Details</a>
+                      </div>
+                    </div>
+                    <a href="../apps/chats.html" class="sb-item">Chats</a>
+                    <a href="../apps/music.html" class="sb-item">Music</a>
+                    <a href="../apps/file-manager.html" class="sb-item">File Manager</a>
+                    <a href="../apps/nft-apps.html" class="sb-item active">NFT Apps</a>
+                    <a href="../apps/pos-system.html" class="sb-item">POS System</a>
+                  </div>
+                </div>
+                <div class="sb-dropdown">
+                  <button id="dropdownPagesBtn" class="sb-btn">
+                    <span class="sb-btn-content">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true"
+                        role="img"
+                        class="iconify iconify--mdi"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path>
+                      </svg>
+                      <span class="sb-label sidebar-label">Pages</span>
+                    </span>
+                    <svg id="dropdownPagesIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownPagesMenu" class="sb-menu hidden">
+                    <a href="../pages/invoice.html" class="sb-item">Invoice</a>
+                    <a href="../pages/faq.html" class="sb-item">FAQ</a>
+                    <a href="../pages/blank.html" class="sb-item">Blank page</a>
+                    <a href="../pages/404.html" class="sb-item">404 page</a>
+                    <a href="../pages/coming-soon.html" class="sb-item">Coming Soon</a>
+                    <a href="../pages/under-maintenance.html" class="sb-item">Under Maintenance page</a>
+                    <a href="../pages/signin.html" class="sb-item">Sign In</a>
+                    <a href="../pages/signup.html" class="sb-item">Sign Up</a>
+                    <a href="../pages/forget-password.html" class="sb-item">Forget Password</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group-title">
+                <span class="group-title-text sb-label sidebar-label">Others</span>
+              </div>
+              <div class="group-content">
+                <div class="sb-dropdown">
+                  <button id="dropdownMultiLevelBtn" type="button" class="sb-btn">
+                    <span class="flex items-center gap-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4V4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z" />
+                      </svg>
+                      <span class="sb-label sidebar-label">Multi Level</span>
+                    </span>
+                    <svg id="dropdownMultiLevelIcon" class="sb-icon-chevron" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                  </button>
+                  <div id="dropdownMultiLevelMenu" class="pl-14 mt-1 space-y-1 hidden">
+                    <div class="relative">
+                      <button id="dropdownLevel1Btn" type="button" class="sb-btn">
+                        <span>Level 1</span>
+                        <svg id="dropdownLevel1Icon" class="sb-icon-chevron" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                        </svg>
+                      </button>
+                      <div id="dropdownLevel1Menu" class="pl-4 mt-1 space-y-1 hidden">
+                        <div class="relative">
+                          <button id="dropdownLevel2Btn" type="button" class="sb-btn">
+                            <span>Level 2</span>
+                            <svg id="dropdownLevel2Icon" class="sb-icon-chevron" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                            </svg>
+                          </button>
+                          <div id="dropdownLevel2Menu" class="pl-4 mt-1 space-y-1 hidden">
+                            <a href="#" class="sb-item">Level 3 Item 1</a>
+                            <a href="#" class="sb-item">Level 3 Item 2</a>
+                            <a href="#" class="sb-item">Level 3 Item 3</a>
+                          </div>
+                        </div>
+                        <a href="#" class="sb-item">Level 2 Item 1</a>
+                        <a href="#" class="sb-item">Level 2 Item 2</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="nav-link" href="../documentation/index.html" data-discover="true">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                  </svg>
+                  <span class="sb-label sidebar-label">Documentation</span>
+                </a>
+              </div>
+            </div>
+          </nav>
+          <div class="sb-footer">
+            <a id="sidebar-version" href="../version.html" class="sidebar-label">Version: ...</a>
+          </div>
+        </div>
+      </aside>
+      <div id="sidebarOverlay" class="sidebar-overlay"></div>
+      <div id="mainContent" class="layout-main">
+        <header id="headerContent" class="main-header">
+          <div class="main-header-inner">
+            <div class="main-header-left">
+              <button id="headerSidebarToggle" class="sm:hidden p-2 mr-2" aria-label="Open sidebar">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+              <button id="mobileSearchBtn" class="header-mobile-search-btn" aria-label="Show search">
+                <svg class="header-mobile-search-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"></line>
+                </svg>
+              </button>
+              <div id="mobileSearchDiv" class="header-mobile-search-div">
+                <div class="header-mobile-search-inner">
+                  <input id="desktopSearchInput" placeholder="Search..." class="header-mobile-search-input" type="text" />
+                  <span id="iconSearchBtn" class="header-mobile-search-icon-search-btn">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"></line>
+                    </svg>
+                  </span>
+                  <span id="iconSearchInput" class="header-mobile-search-icon-search-input">
+                    <svg viewBox="0 0 20 20" fill="currentColor" style="display: block">
+                      <text x="2" y="15" font-size="13" alignment-baseline="middle" dominant-baseline="middle">⌘+</text>
+                    </svg>
+                    F
+                  </span>
+                  <button id="mobileSearchCloseBtn" class="mobile-search-close-btn md:hidden block" aria-label="Close search">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-header-right">
+              <!-- Dropdown Edit Button Start -->
+              <div class="relative" id="editDropdownWrapper">
+                <button id="editDropdownBtn" class="header-right-btn btn-right-border" aria-label="Edit Settings">
+                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M12 8a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-2 12c-.25 0-.46-.18-.5-.42l-.37-2.65c-.63-.25-1.17-.59-1.69-.99l-2.49 1.01c-.22.08-.49 0-.61-.22l-2-3.46a.493.493 0 0 1 .12-.64l2.11-1.66L4.5 12l.07-1l-2.11-1.63a.493.493 0 0 1-.12-.64l2-3.46c.12-.22.39-.31.61-.22l2.49 1c.52-.39 1.06-.73 1.69-.98l.37-2.65c.04-.24.25-.42.5-.42h4c.25 0 .46.18.5.42l.37 2.65c.63.25 1.17.59 1.69.98l2.49-1c.22-.09.49 0 .61.22l2 3.46c.13.22.07.49-.12.64L19.43 11l.07 1l-.07 1l2.11 1.63c.19.15.25.42.12.64l-2 3.46c-.12.22-.39.31-.61.22l-2.49-1c-.52.39-1.06.73-1.69.98l-.37 2.65c-.04.24-.25.42-.5.42zm1.25-18l-.37 2.61c-1.2.25-2.26.89-3.03 1.78L5.44 7.35l-.75 1.3L6.8 10.2a5.55 5.55 0 0 0 0 3.6l-2.12 1.56l.75 1.3l2.43-1.04c.77.88 1.82 1.52 3.01 1.76l.37 2.62h1.52l.37-2.61c1.19-.25 2.24-.89 3.01-1.77l2.43 1.04l.75-1.3l-2.12-1.55c.4-1.17.4-2.44 0-3.61l2.11-1.55l-.75-1.3l-2.41 1.04a5.42 5.42 0 0 0-3.03-1.77L12.75 4z" />
+                  </svg>
+                </button>
+                <div id="editDropdown" class="dropdown-panel settings-dropdown hidden">
+                  <div class="dropdown-header">Quick Edit</div>
+                  <div class="dropdown-body">
+                    <!-- RTL Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">RTL Mode</span>
+                      <label class="dropdown-switch" for="rtlSwitch">
+                        <input type="checkbox" id="rtlSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- Dark Mode Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">Dark Mode</span>
+                      <label class="dropdown-switch" for="darkSwitch">
+                        <input type="checkbox" id="darkSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- Monochrome Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">Monochrome</span>
+                      <label class="dropdown-switch" for="monoSwitch">
+                        <input type="checkbox" id="monoSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- Collapsed Sidebar Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">Collapsed Sidebar</span>
+                      <label class="dropdown-switch" for="sidebarCollapseSwitch">
+                        <input type="checkbox" id="sidebarCollapseSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- F12 In Developer Mode Switch -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">F12 In Developer Mode</span>
+                      <label class="dropdown-switch" for="f12InDeveloperModeSwitch">
+                        <input type="checkbox" id="f12InDeveloperModeSwitch" class="sr-only peer" />
+                        <span class="switch peer-checked:bg-blue-500 dark:bg-gray-500 bg-gray-200"></span>
+                        <span class="toggle peer-checked:translate-x-5"></span>
+                      </label>
+                    </div>
+                    <!-- Sidebar Color Radio -->
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">Sidebar Color</span>
+                      <div class="dropdown-radio" id="sidebarColorRadios">
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="default" class="form-radio text-primary" checked />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="primary" class="form-radio text-primary" />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="success" class="form-radio text-success" />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="danger" class="form-radio text-danger" />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="warning" class="form-radio text-warning" />
+                        </label>
+                        <label class="dropdown-radio-item">
+                          <input type="radio" name="sidebarColor" value="dark" class="form-radio text-dark" />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Dropdown Edit Button End -->
+              <div class="header-right-btn-notif" id="notifDropdownWrapper">
+                <button id="notifBtn" class="header-right-btn">
+                  <span class="absolute -top-1 -right-1 flex items-center justify-center h-4 w-4 rounded-full bg-red-500 text-white text-xs font-bold">2</span>
+                  <svg class="header-right-btn" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                  </svg>
+                </button>
+                <div id="notifDropdown" class="dropdown-panel notif-dropdown hidden">
+                  <div class="dropdown-header">Notifications</div>
+                  <div class="dropdown-body">
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01" />
+                        </svg>
+                      </span>
+                      <div class="dropdown-content">
+                        <h5 class="mb-0">New patient registered</h5>
+                        <p>2 minutes ago</p>
+                      </div>
+                    </div>
+                    <div class="dropdown-row">
+                      <span class="dropdown-label">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <div class="dropdown-content">
+                        <h5 class="mb-0">Patient data updated successfully.</h5>
+                        <p>10 minutes ago</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown-footer">
+                    <a href="#">View all notifications</a>
+                  </div>
+                </div>
+              </div>
+              <div class="relative inline-block" id="userDropdownWrapper">
+                <div id="avatarBtn" class="relative">
+                  <div class="btn-avatar">J</div>
+                  <span class="dot-online"></span>
+                </div>
+                <div id="userDropdown" class="dropdown-panel avatar-dropdown hidden">
+                  <!-- Baris 1: Foto, Nama, Email -->
+                  <div class="dropdown-profile">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" />
+                    <div>
+                      <h5 class="mb-0">John Doe</h5>
+                      <p class="text-xs">johndoe@email.com</p>
+                    </div>
+                  </div>
+                  <!-- Baris 2: Role Management -->
+                  <div class="dropdown-body -mb-2">
+                    <div class="dropdown-row">
+                      <div class="dropdown-search">
+                        <div class="dropdown-search-icon">
+                          <svg class="dropdown-search-icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="m21 9l-4-4v3h-7v2h7v3M7 11l-4 4l4 4v-3h7v-2H7z" />
+                          </svg>
+                        </div>
+                        <input type="text" id="searchable-select" placeholder="Select a role..." autocomplete="off" value="Doctor" />
+                        <ul id="options-list" class="dropdown-search-list hidden">
+                          <li class="dropdown-search-item">Administrator</li>
+                          <li class="dropdown-search-item">Doctor</li>
+                          <li class="dropdown-search-item">Nurse</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Baris 3: Profile & Settings -->
+                  <div class="dropdown-body">
+                    <a href="#" class="dropdown-row">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 15c2.485 0 4.847.635 6.879 1.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      </svg>
+                      Profile
+                    </a>
+                    <a href="#" class="dropdown-row">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                          fill="currentColor"
+                          d="M12 8a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-2 12c-.25 0-.46-.18-.5-.42l-.37-2.65c-.63-.25-1.17-.59-1.69-.99l-2.49 1.01c-.22.08-.49 0-.61-.22l-2-3.46a.493.493 0 0 1 .12-.64l2.11-1.66L4.5 12l.07-1l-2.11-1.63a.493.493 0 0 1-.12-.64l2-3.46c.12-.22.39-.31.61-.22l2.49 1c.52-.39 1.06-.73 1.69-.98l.37-2.65c.04-.24.25-.42.5-.42h4c.25 0 .46.18.5.42l.37 2.65c.63.25 1.17.59 1.69.98l2.49-1c.22-.09.49 0 .61.22l2 3.46c.13.22.07.49-.12.64L19.43 11l.07 1l-.07 1l2.11 1.63c.19.15.25.42.12.64l-2 3.46c-.12.22-.39.31-.61.22l-2.49-1c-.52.39-1.06.73-1.69.98l-.37 2.65c-.04.24-.25.42-.5.42zm1.25-18l-.37 2.61c-1.2.25-2.26.89-3.03 1.78L5.44 7.35l-.75 1.3L6.8 10.2a5.55 5.55 0 0 0 0 3.6l-2.12 1.56l.75 1.3l2.43-1.04c.77.88 1.82 1.52 3.01 1.76l.37 2.62h1.52l.37-2.61c1.19-.25 2.24-.89 3.01-1.77l2.43 1.04l.75-1.3l-2.12-1.55c.4-1.17.4-2.44 0-3.61l2.11-1.55l-.75-1.3l-2.41 1.04a5.42 5.42 0 0 0-3.03-1.77L12.75 4z" />
+                      </svg>
+                      Settings
+                    </a>
+                    <a href="#" class="dropdown-row">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10 9 9 9 8 9" />
+                      </svg>
+                      Documentation
+                    </a>
+                  </div>
+                  <!-- Baris 4: Logout -->
+                  <div class="dropdown-footer">
+                    <a href="#" class="dropdown-row">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7"></path>
+                      </svg>
+                      Logout
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <div class="main-content">
+            <div class="main-content-inner">
+              <!-- Breadcrumb Start -->
+              <div class="breadcrumb">
+                <nav>
+                  <ol class="breadcrumb-list">
+                    <li>
+                      <a class="breadcrumb-link" href="#">
+                        Home
+                        <svg class="stroke-current" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.0765 12.667L10.2432 8.50033L6.0765 4.33366" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li id="pageName" class="page-name">...</li>
+                  </ol>
+                </nav>
+              </div>
+              <!-- Breadcrumb End -->
+              <div class="card-content">
+                <div class="card-header">
+                  <h3 class="font-semibold break-words text-center">NFT Apps</h3>
+                </div>
+                <div class="card-body">
+                  <p>Coming Soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="footer-inner">
+            <p class="footer-text">
+              © 2025 hiraway. Designed with ❤️ by
+              <a href="https://github.com/Arisdolanan" target="_blank" class="text-blue-500">Me (vibe coding)</a>
+              x AI All rights reserved
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="../assets/js/hiraway.js"></script>
+  </body>
+</html>
