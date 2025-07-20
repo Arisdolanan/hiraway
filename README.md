@@ -147,7 +147,16 @@ This page provides information about the third-party libraries, assets, and lice
 - **[Iconify](https://iconify.design/)** (MIT License)  
   Used for all icon rendering throughout the template. Supports multiple icon sets including Material Design Icons.
 
-All the libraries above are fully open-source, licensed under MIT, and are safe for commercial distribution.
+- **[Quill.js](https://quilljs.com/)** (BSD License)  
+  Used as a rich text editor in some form inputs.
+
+- **[Masky](https://github.com/andreialecu/masky)** (MIT License)  
+  Used for input masking (e.g., phone numbers, dates, etc.).
+
+- **[validator.js](https://github.com/validatorjs/validator.js)** (MIT License)  
+  Used for string validation and sanitization in form inputs.
+
+All the libraries above are fully open-source, licensed under MIT, BSD, or similar, and are safe for commercial distribution.
 
 ---
 
